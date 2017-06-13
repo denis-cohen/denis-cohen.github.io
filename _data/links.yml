@@ -1,0 +1,14 @@
+- url: /
+  title: About
+
+- url: /cohen_cv.pdf
+  title: CV
+
+- url: /research
+  title: Research
+
+- url: /teaching
+  title: Teaching
+
+- url: /contact
+  title: Contact

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+{% include head.html %}
+  </head>
+  <body>
+    <main class="container {% if site.color_scheme %}{{ site.color_scheme }}{% else %}avocado{% endif %}">
+      {% if page.title == "Home" %}
+      <header class="fadeInLeft animated">
+      {% else %}
+      <header>
+      {% endif %}
+        <div>
+          <a href="{{ site.url }}" id="logo" title="{{ site.title }}"
+             style="background-image: url({{ '/assets/images/logo.png' | relative_url }});"></a>
+        </div>
+
+        {% include navigation.html %}
+      </header>
+
+      {{ content }}
+
+	<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+	<style>
+
+	ul.nav {
+	text-align: center;
+	}
+
+	ul.nav li {
+	display: inline-block;
+	}
+
+	ul.nav li a i {
+	color: #000000;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	text-align: center;
+	margin-right: 5px;
+	padding-top: 0%;
+	}
+
+	ul.nav li a i:hover {
+	opacity: .7;
+	}
+	</style>
+	
+	<footer>
+	<hr>
+	<ul class="nav">
+	  <li><a href="mailto:denis.cohen@hu-berlin.de"><i class="fa
+	  fa-envelope"></i>email &emsp; &emsp; &emsp;</a></li>
+	  <li><a href="http://github.com/denis-cohen"><i class="fa
+	  fa-github"></i>github &emsp; &emsp; &emsp;</a></li>
+	  <li><a href="http://twitter.com/denis_cohen"><i class="fa
+	  fa-twitter"></i>twitter &emsp; &emsp; &emsp;</a></li>
+	  <li><a href="http://facebook.com/dc132"><i class="fa
+	  fa-facebook"></i>facebook &emsp; &emsp; &emsp;</a></li>
+	</ul class="nav">
+	</footer>
+	</main>
+
+	<!-- scripts -->
+	<script src="{{ '/assets/js/fluidvids.min.js' | relative_url
+	}}"></script>
+	<script>
+	fluidvids.init({
+	selector: ['iframe', 'object'],
+        players: ['www.youtube.com', 'player.vimeo.com']
+	});
+	</script>
+	</body>
+</html>
