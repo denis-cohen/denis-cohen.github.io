@@ -3,9 +3,9 @@ laout: home
 title: About
 ---
 <p style="text-align:justify">
-<!--<img alt="Denis Cohen" src="assets/images/portrait.jpeg"
+<img alt="Denis Cohen" src="assets/images/portrait.jpeg"
 style="float:right;margin:5px 0px 10px
-20px;width:260px;height:260px;">-->
+20px;width:260px;height:260px;">
 I am a PhD candidate at the <a
  href="https://www.bgss.hu-berlin.de/de/bgss/">Berlin Graduate School
  of Social Sciences</a> at <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a>.
