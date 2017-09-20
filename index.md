@@ -3,8 +3,6 @@ layout: home
 title: About
 ---
 
-<img alt="Denis Cohen" src="assets/images/banner.png">
-
 <p style="text-align:justify">
 I am a PhD candidate at the <a
  href="https://www.bgss.hu-berlin.de/de/bgss/">Berlin Graduate School
