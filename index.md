@@ -1,11 +1,7 @@
 ---
-laout: home
+layout: home
 title: About
-featured-img: /assets/images/banner.png
 ---
-<div class="FeaturedImgBanner" {% if page.featured-img %} style="background-image: url('{{ page.featured-img }}');" {% endif %}>
-<!-- Include your post title, byline, date, and other info inside the header here. -->
-</div>
 
 <p style="text-align:justify">
 <!--<img alt="Denis Cohen" src="assets/images/portrait.jpeg"
