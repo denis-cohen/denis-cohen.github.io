@@ -179,8 +179,8 @@ header > div {
 #logo {
   display: inline-block;
   height: 110px;
-  width: 230px;
-  background-size: 220px 110px;
+  width: 175px;
+  background-size: 165px 110px;
   background-position: left center;
   background-repeat: no-repeat;
 }
