@@ -1,6 +1,5 @@
 ---
 layout: home
-title: About
 ---
 
 <p style="text-align:justify">
