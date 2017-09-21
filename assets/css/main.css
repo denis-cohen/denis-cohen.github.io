@@ -166,9 +166,9 @@ header > div {
 #logo {
   display: inline-block;
   height: 110px;
-  width: 110px;
-  background-size: 110px 110px;
-  background-position: left center;
+  width: 230px;
+  background-size: 110px 220px;
+  background-position: left;
   background-repeat: no-repeat;
 }
 
