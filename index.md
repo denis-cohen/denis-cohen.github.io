@@ -4,7 +4,7 @@ title: About
 ---
 
 <p style="text-align:justify">
- <img alt="Denis Cohen" src="assets/images/logo5.png"
+ <img alt="Denis Cohen" src="assets/images/logo4.png"
  style="float:right;margin:5px 0px 10px
  20px;width:260px;height:390px;">
  I am a PhD candidate at the <a
