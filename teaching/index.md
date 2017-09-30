@@ -13,7 +13,7 @@ title: Teaching
 	</style>
 
 
-#### Upcoming
+#### Current Courses
 <ul class="yr">
 <li> <font color="#0070bb"> 2017. </font>
 Explaining Electoral Support for Far-Right Parties (BA level class, <a

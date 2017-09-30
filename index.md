@@ -8,13 +8,11 @@ layout: home
  20px;width:260px;height:390px;">
  I am a PhD candidate at the <a
  href="https://www.bgss.hu-berlin.de/de/bgss/">Berlin Graduate School
- of Social Sciences</a> at <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a>.
+ of Social Sciences</a> and a research associate at the <a href="https://www.sowi.hu-berlin.de/en/lehrbereiche-en/comppol-en">Comparative Politics Unit</a> at <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a>. <br>
  My research focus lies at the intersection of political preference formation, electoral behavior
- and political competition. In my dissertation, I study
- context-dependent mechanisms that contribute to the explanation of
- individual-level voting behavior for far-right parties in Europe. <br>
+ and political competition.
  My methodological interests include quantitative approaches to the
- analysis of clustered data, measurement models, strategies for causal
+ analysis of clustered data, measurement models, data visualization, strategies for causal
  identification and Bayesian statistics. <br>
  I hold a BA in Social Sciences from
  <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a> (2013) and an MSc in Political Economy
