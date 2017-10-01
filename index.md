@@ -5,7 +5,7 @@ layout: home
 <p style="text-align:justify">
  <img alt="Denis Cohen" src="assets/images/logo4.png"
  style="float:right;margin:5px 0px 10px
- 20px;width:260px;height:390px;">
+ 30px;width:260px;height:390px;">
  I am a PhD candidate at the <a
  href="https://www.bgss.hu-berlin.de/de/bgss/">Berlin Graduate School
  of Social Sciences</a> and a research associate at the <a href="https://www.sowi.hu-berlin.de/en/lehrbereiche-en/comppol-en">Comparative Politics Unit</a> at <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a>. <br>
