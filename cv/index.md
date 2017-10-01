@@ -3,5 +3,6 @@ layout: page
 title: CV
 ---
 
-<embed src="cohen_cv.pdf" width="100%" height="500px" type='application/pdf'>
-
+<object data="cohen_cv.pdf" width="100%" height="500px" type='application/pdf'>
+<p>It appears your browser doesn't support the required PDF plug-in. Feel free to <a href="cv_cohen.pdf">download the PDF</a> instead.</p>
+</object>
