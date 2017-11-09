@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Too Far Out to Care? Incentives for Coalition-Directed Voting among
-  Extreme and Centrist Voters
+title: Too Far Out to Care? Incentives for Coalition-Directed Voting among Extreme and Centrist Voters
 ---
 
 In addition to sincere platform-directed considerations, vote choice in multi-party democ-

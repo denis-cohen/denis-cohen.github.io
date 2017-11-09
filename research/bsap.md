@@ -1,8 +1,9 @@
 ---
 layout: page
-title: Between Strategy and Protest. How Policy Demand, Political
-Dissatisfaction and Strategic Incentives Matter for Far-Right Voting
+title: Between Strategy and Protest. How Policy Demand, Political Dissatisfaction and Strategic Incentives Matter for Far-Right Voting
 ---
+
+#### Between Strategy and Protest. How Policy Demand, Political Dissatisfaction and Strategic Incentives Matter for Far-Right Voting
 
 What attracts voters to far right parties? Emphasizing the repercussions of
 far right parties' past achievements on the mobilization of voters' electoral

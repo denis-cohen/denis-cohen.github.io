@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Economic Risk, Anti-Immigration Preferences, and Voting for the
-Radical Right 
+title: Economic Risk, Anti-Immigration Preferences, and Voting for the Radical Right 
 ---
 
+#### Economic Risk, Anti-Immigration Preferences, and Voting for the Radical Right 
 While extensive research stresses the importance of economic insecurity and immigration-
 skeptic nativism for radical right support, little is known about the synergy
 between economic and attitudinal explanations. In this paper, I make the case for
