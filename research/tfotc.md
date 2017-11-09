@@ -1,0 +1,8 @@
+---
+layout: page
+title: Too Far Out to Care? Incentives for Coalition-Directed Voting among
+  Extreme and Centrist Voters
+---
+
+In addition to sincere platform-directed considerations, vote choice in multi-party democ-
+racies is driven by the strategic desire to influence expected policy outcomes. While existing research shows that coalition expectations are an important driver of policy-directed voting, it remains unclear if coalition-directed considerations enter the decision calculus of all voters alike. I argue that voters are only responsive to coalition-directed incentives from parties ide- ologically proximate enough to be viable options. As voters discount expected policy-directed benefits from coalition expectations for distant parties, extreme voters are systematically disin- centivized from engaging in coalition-directed voting as they typically face few choices within reasonable ideological proximity and are remote from mainstream parties that are most likely to shape government policy. In line with my theory, my analyses of pre-election surveys from three multi-party democracies show a sharp decline in the salience of coalition expectations for vote choice as ideological distance increases. I also find partial support for the hypothesis that extreme voters engage less in coalition-directed voting.
