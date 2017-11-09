@@ -12,19 +12,12 @@ title: Teaching
 	}
 	</style>
 
-
 #### Current Courses
-<ul class="yr">
-<li> <font color="#0070bb"> 2017. </font>
-Explaining Electoral Support for Far-Right Parties (BA level class, <a
+* <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=132468&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Explaining Electoral Support for Far Right Parties</a> (BA level class, <a
  href="https://www.sowi.hu-berlin.de/">HU Berlin</a>)
-</li>
-<li> <font color="#0070bb"> 2017. </font>
-Grundkurs Vergleichende Politikwissenschaft und Internationale
-Beziehungen (BA level class, <a
+* <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=132232&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Grundkurs Vergleichende Politikwissenschaft und Internationale Beziehungen</a> (BA level class, <a
  href="https://www.sowi.hu-berlin.de/">HU Berlin</a>)
-</li>
-</ul>
+
 
 #### Past Teaching Assistance
 <ul class="yr">
