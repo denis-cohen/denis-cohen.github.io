@@ -12,11 +12,17 @@ title: Teaching
 	}
 	</style>
 
+#### Upcoming Courses
+* <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=138894&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Explaining Political Preferences -- Theory, Empirics & Applications</a>. Undergraduate specialization module, <a
+ href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2017 - 03/2018. <a
+ href="syllabus_epp18.pdf">[syllabus]</a>
+
 #### Current Courses
 * <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=132468&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Explaining Electoral Support for Far Right Parties</a>. Undergraduate seminar, <a
- href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2017-03/2018.
+ href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2017 - 03/2018. <a
+ href="syllabus_eesfrp17.pdf">[syllabus]</a>
 * <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=132232&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Grundkurs Vergleichende Politikwissenschaft und Internationale Beziehungen</a>. Undergraduate introductory seminar, <a
- href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2017-03/2018.
+ href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2017 - 03/2018.
 
 
 #### Past Teaching Assistance
@@ -31,9 +37,9 @@ title: Teaching
 <a
  href="http://www.essex.ac.uk/government/">University of Essex</a>. 10/2014.
 * Statistik II. Undergraduate course by <a
- href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Gro√ü</a>, <a
+ href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Groﬂ</a>, <a
  href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 04/2011 - 09/2011.
 * Statistik I. Undergraduate course by <a
- href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Gro√ü</a>, <a
+ href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Groﬂ</a>, <a
  href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2010 - 03/2011.
 

@@ -13,4 +13,4 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting</a>
 #### Work in Progress
 * <a href="tfotc">Too Far Out to Care? Incentives for Coalition-Directed Voting among
   Extreme and Centrist Voters</a>
-* Looming Threats of Loss. Introducing and Validating a Sectoral-Occupational Model of Economic Risk
+* <a href="ltol">Looming Threats of Loss. Introducing and Validating a Sectoral-Occupational Model of Economic Risk</a>
