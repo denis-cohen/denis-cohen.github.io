@@ -3,12 +3,9 @@ layout: page
 title: Research
 ---
 
-#### Under Review
+#### Working Papers
 * <a href="bsap">Between Strategy and Protest. How Policy Demand, Political
 Dissatisfaction and Strategic Incentives Matter for Far-Right Voting</a>
-
-
-#### Working Papers
 * <a href="eraipvrr">Economic Risk, Anti-Immigration Preferences, and Voting for the
 Radical Right</a>
 * <a href="rttrrc">Responding to the Radical Right Challenge:
