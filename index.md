@@ -6,7 +6,7 @@ layout: home
  <img alt="Denis Cohen" src="assets/images/logo5.1.png"
  style="float:right;margin:5px 0px 10px
  30px;width:260px">
- I am a Postdoctoral Fellow in the <a
+ I am a postdoctoral fellow in the <a
  href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a
  href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a
  href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. <br>  <br>
