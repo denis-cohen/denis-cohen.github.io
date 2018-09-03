@@ -1,11 +1,11 @@
----
+ï»¿---
 layout: page
 title: Contact
 ---
 
 #### Postal Address
-Universität Mannheim  <br />
-Mannheimer Zentrum für Europäische Sozialforschung (MZES)  <br />
+UniversitÃ¤t Mannheim  <br />
+Mannheimer Zentrum fÃ¼r EuropÃ¤ische Sozialforschung (MZES)  <br />
 68131 Mannheim
 
 #### Office
