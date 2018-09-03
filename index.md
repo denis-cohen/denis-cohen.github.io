@@ -5,7 +5,7 @@ layout: home
 <p style="text-align:justify">
  <img alt="Denis Cohen" src="assets/images/logo5.1.png"
  style="float:right;margin:5px 0px 10px
- 30px;width:260px;height:390px;">
+ 30px;width:260px;height:367px;">
  I am a Postdoctoral Fellow in the <a
  href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a
  href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a
@@ -14,7 +14,7 @@ layout: home
  and political competition.
  My methodological interests include quantitative approaches to the
  analysis of clustered data, measurement models, data visualization, strategies for causal
- identification and Bayesian statistics. <br>
+ identification and Bayesian statistics. <br /> <br />
  I hold a BA in Social Sciences from
  <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a> (2013) and an MSc in Political Economy
  from the <a href="http://essex.ac.uk/">University of Essex</a> (2014).
