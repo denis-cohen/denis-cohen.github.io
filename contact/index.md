@@ -4,13 +4,11 @@ title: Contact
 ---
 
 #### Postal Address
-Humboldt-UniversitÃ¤t zu Berlin  <br />
-Institut fÃ¼r Sozialwissenschaften  <br />
-Vergleichende Analyse politischer Systeme  <br />
-Unter den Linden 6  <br />
-10099 Berlin
+Universität Mannheim  <br />
+Mannheimer Zentrum für Europäische Sozialforschung (MZES)  <br />
+68131 Mannheim
 
 #### Office
-UniversitÃ¤tsstraÃŸe 3b <br />
-Room 413b <br />
-10117 Berlin
+A5, 6 (Section A) <br />
+Room A218 <br />
+68159 Mannheim

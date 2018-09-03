@@ -3,12 +3,13 @@ layout: home
 ---
 
 <p style="text-align:justify">
- <img alt="Denis Cohen" src="assets/images/logo4.png"
+ <img alt="Denis Cohen" src="assets/images/logo5.1.png"
  style="float:right;margin:5px 0px 10px
  30px;width:260px;height:390px;">
- I am a PhD candidate at the <a
- href="https://www.bgss.hu-berlin.de/de/bgss/">Berlin Graduate School
- of Social Sciences</a> and a research associate at the <a href="https://www.sowi.hu-berlin.de/en/lehrbereiche-en/comppol-en">Comparative Politics Unit</a> at <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a>. <br>
+ I am a Postdoctoral Fellow in the <a
+ href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a
+ href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a
+ href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. <br>
  My research focus lies at the intersection of political preference formation, electoral behavior
  and political competition.
  My methodological interests include quantitative approaches to the
@@ -16,7 +17,10 @@ layout: home
  identification and Bayesian statistics. <br>
  I hold a BA in Social Sciences from
  <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a> (2013) and an MSc in Political Economy
- from the <a href="http://essex.ac.uk/">University of Essex</a> (2014).</p>
+ from the <a href="http://essex.ac.uk/">University of Essex</a> (2014).
+ Prior to joining the <a
+ href="https://www.mzes.uni-mannheim.de/d7/en">MZES</a>, I finished my PhD at the <a href="https://www.bgss.hu-berlin.de/de/bgss/">Berlin Graduate School
+ of Social Sciences</a> at <a href="https://www.hu-berlin.de/">Humboldt University of Berlin</a>, where I also worked as a research associate in the <a href="https://www.sowi.hu-berlin.de/en/lehrbereiche-en/comppol-en">Comparative Politics Unit</a>.</p>
  <br/>
 
 
