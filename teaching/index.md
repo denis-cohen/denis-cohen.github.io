@@ -12,6 +12,9 @@ title: Teaching
 	}
 	</style>
 
+#### Current Courses
+* <a href="https://portal2.uni-mannheim.de/portal2/pages/cm/exa/coursecatalog/showCourseCatalog.xhtml?_flowId=showCourseCatalog-flow&_flowExecutionKey=e1s8">Socio-Structural Explanations of Political Behavior</a>. Undergraduate seminar, <a href="https://www.sowi.hu-berlin.de/">University of Mannheim</a>. 02/2019 - 08/2019. <a href="syllabus_ssepb19.pdf">[syllabus]</a>
+
 #### Past Courses
 * <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=138894&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Explaining Political Preferences - Theory, Empirics & Applications</a>. Undergraduate specialization module, <a href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 04/2018 - 09/2018. <a href="syllabus_epp18.pdf">[syllabus]</a>
 * <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=132468&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Explaining Electoral Support for Far Right Parties</a>. Undergraduate seminar, <a
