@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Responding to the Radical Right Challenge -- Party Shifts and Voter Reactions
+---
 
 In seeking to curtail the success of radical right challengers, many parties pursue
 accommodative strategies - they coopt radical right issue positions in an attempt to
