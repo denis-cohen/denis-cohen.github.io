@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Does Accommodation Work? Mainstream Party Strategies and the Success
-of Radical Right Parties (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/))
+title: Does Accommodation Work? Mainstream Party Strategies and the Success of Radical Right Parties (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/))
 ---
 
 This research note investigates how mainstream party strategies affect the success of radical right parties. While several studies have looked at the effect of mainstream party positions on radical right breakthrough, only few have taken into account the most recent wave of radical right success and looked at how these strategies affect more established radical right parties. Following Meguid’s (2005) seminal study, we investigate the effect of accommodative strategies on radical right vote shares. We analyze party level data as well as micro level voter transitions between mainstream and radical right parties. We do not find any evidence that accommodative strategies reduce radical right vote shares. If anything, when mainstream parties shift toward more anti-immigrant positions, more voters defect to the radical right. Our findings have important implications for the study of multi-party competition as they challenge was has become a core assumption of this literature: that accommodative strategies reduce niche party support. In addition, they can help inform a current debate about how established parties should respond to the radical right challenge.   
