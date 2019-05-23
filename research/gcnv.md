@@ -1,0 +1,6 @@
+---
+layout: page
+title: Gender, Candidate Nomination, and Voter Support (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
+---
+
+This paper analyzes the interplay of gender, the selection of parliamentary candidates, and voting behavior. Extant research shows that voters engage in same-gender voting: Men tend to support male candidates whereas women tend to support females. Voters can, however, only engage in same-gender voting if parties field viable candidates of the same gender. Intra-partisan bias toward fielding male candidates in promising races hence undermines women’s capacity of casting strategically rational votes for female candidates. We test this argument and seek to identify the extent to which it materializes by analyzing gender-specific candidate selection and candidate voting in the 2010 and 2015 UK general elections. We jointly model parties’ propensity of fielding female candidates and (female) voters’ probability of voting for female candidates contingent on candidates' chances of winning. Multi-wave panel data from the BES and UKHLS allows us to supplement observational analyses with quasi-experimental evidence. Our results and accompanying simulations yield important implications for the representation of women in parties and in parliaments alike.
