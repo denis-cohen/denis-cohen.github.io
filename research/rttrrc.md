@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Responding to the Radical Right Challenge -- Party Shifts and Voter Reactions (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/))
----
+title: Responding to the Radical Right Challenge -- Party Shifts and Voter Reactions
 
 In seeking to curtail the success of radical right challengers, many parties pursue
 accommodative strategies - they coopt radical right issue positions in an attempt to
