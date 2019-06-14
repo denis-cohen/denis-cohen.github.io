@@ -7,10 +7,10 @@ title: Research
 
 ##### Peer-Reviewed Journal Articles
 
-###### Forthcoming
+###### 2019
 
 * [Between Strategy and Protest. How Policy Demand, Political
-Dissatisfaction and Strategic Incentives Matter for Far-Right Voting](bsap). *Political Science Research and Methods*.
+Dissatisfaction and Strategic Incentives Matter for Far-Right Voting](bsap). *Political Science Research and Methods*. [paper](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/between-strategy-and-protest-how-policy-demand-political-dissatisfaction-and-strategic-incentives-matter-for-farright-voting/41E82D615A1BF10D1E85724E7142C2BA)
 
 ##### Chapters in Edited Volumes
 
