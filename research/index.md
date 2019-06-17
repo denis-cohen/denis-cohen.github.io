@@ -10,7 +10,7 @@ title: Research
 ###### 2019
 
 * [Between Strategy and Protest. How Policy Demand, Political
-Dissatisfaction and Strategic Incentives Matter for Far-Right Voting](bsap). *Political Science Research and Methods*. [[article]](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/between-strategy-and-protest-how-policy-demand-political-dissatisfaction-and-strategic-incentives-matter-for-farright-voting/41E82D615A1BF10D1E85724E7142C2BA)
+Dissatisfaction and Strategic Incentives Matter for Far-Right Voting](bsap). *Political Science Research and Methods*. [[article]](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/between-strategy-and-protest-how-policy-demand-political-dissatisfaction-and-strategic-incentives-matter-for-farright-voting/41E82D615A1BF10D1E85724E7142C2BA) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/V5AOXD)
 
 ##### Chapters in Edited Volumes
 
