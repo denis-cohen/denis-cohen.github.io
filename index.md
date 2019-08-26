@@ -9,7 +9,9 @@ layout: home
  I am a postdoctoral fellow in the <a
  href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a
  href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a
- href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. <br>  <br>
+ href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. I am a co-editor and author at <a
+ href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/">Methods Bites</a>, the blog of the <a
+ href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/page/about/">MZES Social Science Data Lab</a>. <br>  <br>
  My research focus lies at the intersection of political preference formation, electoral behavior
  and political competition.
  My methodological interests include quantitative approaches to the
