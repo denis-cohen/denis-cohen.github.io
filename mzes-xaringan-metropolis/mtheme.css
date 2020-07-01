@@ -379,6 +379,7 @@ table.contact td, table.contact th {
 
 a, a > code {
  color: #007696;
+ text-decoration: none;
 }
 
 .cyan {

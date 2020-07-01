@@ -196,7 +196,7 @@ A Chord Diagram
 ]
 
 .right-column[
-```{r, out.width = "400px", fig.align='center', fig.cap='Fig. 1: Voter transitions turned into a blog logo'}
+```{r, out.width = "50%", fig.align='center', fig.cap='Fig. 1: Voter transitions turned into a blog logo'}
 knitr::include_graphics("ssdl_logo.png")
 ```
 ]

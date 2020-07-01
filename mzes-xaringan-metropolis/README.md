@@ -1,7 +1,8 @@
-# What is the MZES Xaringan Metropolis Theme?
+# What is `mzes-xaringan-metropolis`?
 
-- This theme, inspired by the MZES corporate design, is a customization of the popular [`metropolis`](https://github.com/matze/mtheme) theme for [`xaringan`](https://bookdown.org/yihui/rmarkdown/xaringan.html), an R package for generating interactive HTML5 slides using [RMarkdown](https://bookdown.org/yihui/rmarkdown/).
-- It relies on:
+- The MZES Xaringan Metropolis Theme, is an unofficial template for slides inspired by the MZES corporate design.
+- It is a customization of the popular [`metropolis`](https://github.com/matze/mtheme) theme for [`xaringan`](https://bookdown.org/yihui/rmarkdown/xaringan.html), an R package for generating interactive HTML5 slides using [RMarkdown](https://bookdown.org/yihui/rmarkdown/).
+- It relies heavily on these excellent resources:
 
     - [xaringan](https://github.com/yihui/xaringan), developed by Yihui Xie at RStudio,
     - [Patrick Schratz](https://github.com/pat-s/xaringan-metropolis)' and [Danilo Freire](https://github.com/danilofreire/xaringan-metropolis)'s adaptations of the `metropolis` theme for `xaringan`, and
