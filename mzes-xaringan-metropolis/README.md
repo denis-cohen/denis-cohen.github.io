@@ -8,4 +8,4 @@
     - [Patrick Schratz](https://github.com/pat-s/xaringan-metropolis)' and [Danilo Freire](https://github.com/danilofreire/xaringan-metropolis)'s adaptations of the `metropolis` theme for `xaringan`, and
     - [Garrik Aden-Buie](https://www.garrickadenbuie.com/blog/xaringan-tip-logo-all-slides/)'s `insert-logo.html` add-on.
     
-- A matching MZES Beamer Metropolis Theme is available [here](https://github.com/denis-cohen/mzes-beamer-metropolis/).
+- A matching MZES Beamer Metropolis Theme is available [[repository](https://github.com/denis-cohen/mzes-beamer-metropolis/)] [[demo](https://github.com/denis-cohen/mzes-beamer-metropolis/blob/master/mzes-beamer-metropolis.pdf)].
