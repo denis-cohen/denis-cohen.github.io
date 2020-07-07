@@ -14,7 +14,7 @@
     <script src="mzes-xaringan-metropolis_files/crosstalk/js/crosstalk.min.js"></script>
     <link href="mzes-xaringan-metropolis_files/plotly-htmlwidgets-css/plotly-htmlwidgets.css" rel="stylesheet" />
     <script src="mzes-xaringan-metropolis_files/plotly-main/plotly-latest.min.js"></script>
-    <link rel="stylesheet" href="mtheme.css" type="text/css" />
+    <link rel="stylesheet" href="mtheme2.css" type="text/css" />
     <link rel="stylesheet" href="fonts_mtheme.css" type="text/css" />
   </head>
   <body>
@@ -71,7 +71,7 @@ Author 2
 </tr>
 </tbody>
 </table>
-### Cool Conference, Cool Place <br /> July 01, 2020
+### Cool Conference, Cool Place <br /> July 07, 2020
 
 ---
 
@@ -129,7 +129,7 @@ class: inverse, middle, mline, center
 
 # Code highlighting
 
-The MZES Xaringan Metropolis Theme supports inline code highlighting in MZES cyan and line-wise code chunk highlighting in (shades of) MZES gold.
+The MZES Xaringan Metropolis Theme supports inline code highlighting in .cyan[MZES cyan] and line-wise code chunk highlighting in (shades of) .gold[MZES gold].
 
 #### Inline code highlighting
 
@@ -152,10 +152,8 @@ if (TRUE) {
 
 # MathJax and Block Quotes
 
-The MZES Xaringan Metropolis Theme by defaults highlights MathJax expressions in the MZES gold color.
-
-
 #### MathJax
+By default, the MZES Xaringan Metropolis Theme highlights MathJax expressions in .gold[MZES gold].
 
 `$$y = \alpha + \beta x + \epsilon$$`
 
@@ -191,7 +189,7 @@ A Chord Diagram
 
 
 
-Citations can be inserted using `RefManageR`. After converting the sample file `biblatexExamples.bib` as an R object `bib`, we can cite in-text via `Citet(bib, "cicero")` or in parentheses using `Citep(bib, "nietzsche:ksa")`. 
+Citations can be inserted using `RefManageR`. After converting the sample file `biblatexExamples.bib` to an R object named `bib`, we can cite in-text via `Citet(bib, "cicero")` or in parentheses using `Citep(bib, "nietzsche:ksa")`. 
 
 Effectively, this will look like this: We first cite &lt;a name=cite-cicero&gt;&lt;/a&gt;[Cicero (1995)](#bib-cicero) in text and then &lt;a name=cite-nietzscheksa&gt;&lt;/a&gt;([Nietzsche, 1988a](#bib-nietzscheksa)) in parentheses. We can then print the bibliography using `PrintBibliography(bib)` inside an R code chunk with the option `results='asis'`.
 
@@ -212,8 +210,8 @@ Taschenbuch-Verlag and Walter de Gruyter.
 
 # Interactive R-generated HTML Widgets
 
-<div id="htmlwidget-f7c100166b9c47f33a0e" style="width:1000px;height:576px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f7c100166b9c47f33a0e">{"x":{"visdat":{"a2447bf3e09":["function () ","plotlyVisDat"]},"cur_data":"a2447bf3e09","attrs":{"a2447bf3e09":{"orientation":"h","node":{"label":["PowerPoint","Beamer","xaringan","PowerPoint","Beamer","xaringan"],"color":["#d04423","#008181","#DC2D37","#d04423","#008181","#DC2D37"],"pad":15,"thickness":15,"line":{"color":"black","width":0.5}},"link":{"source":[0,0,0,1,1,1,2,2,2],"target":[3,4,5,3,4,5,3,4,5],"value":[20,25,10,2,13,15,1,1,13]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"sankey"}},"layout":{"width":1000,"height":576,"margin":{"b":40,"l":60,"t":25,"r":10},"font":{"size":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"orientation":"h","node":{"label":["PowerPoint","Beamer","xaringan","PowerPoint","Beamer","xaringan"],"color":["#d04423","#008181","#DC2D37","#d04423","#008181","#DC2D37"],"pad":15,"thickness":15,"line":{"color":"black","width":0.5}},"link":{"source":[0,0,0,1,1,1,2,2,2],"target":[3,4,5,3,4,5,3,4,5],"value":[20,25,10,2,13,15,1,1,13]},"type":"sankey","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-3feb4857bfdef748eafb" style="width:1000px;height:576px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3feb4857bfdef748eafb">{"x":{"visdat":{"1b646d4243c8":["function () ","plotlyVisDat"]},"cur_data":"1b646d4243c8","attrs":{"1b646d4243c8":{"orientation":"h","node":{"label":["PowerPoint","Beamer","xaringan","PowerPoint","Beamer","xaringan"],"color":["#d04423","#008181","#DC2D37","#d04423","#008181","#DC2D37"],"pad":15,"thickness":15,"line":{"color":"black","width":0.5}},"link":{"source":[0,0,0,1,1,1,2,2,2],"target":[3,4,5,3,4,5,3,4,5],"value":[20,25,10,2,13,15,1,1,13]},"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"sankey"}},"layout":{"width":1000,"height":576,"margin":{"b":40,"l":60,"t":25,"r":10},"font":{"size":10},"hovermode":"closest","showlegend":false},"source":"A","config":{"showSendToCloud":false},"data":[{"orientation":"h","node":{"label":["PowerPoint","Beamer","xaringan","PowerPoint","Beamer","xaringan"],"color":["#d04423","#008181","#DC2D37","#d04423","#008181","#DC2D37"],"pad":15,"thickness":15,"line":{"color":"black","width":0.5}},"link":{"source":[0,0,0,1,1,1,2,2,2],"target":[3,4,5,3,4,5,3,4,5],"value":[20,25,10,2,13,15,1,1,13]},"type":"sankey","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 ---
 
