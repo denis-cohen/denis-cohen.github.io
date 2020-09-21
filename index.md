@@ -9,9 +9,9 @@ layout: home
  I am a postdoctoral fellow in the <a
  href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a
  href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a
- href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. I am also a co-organizer of the <a
- href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/page/about/">MZES Social Science Data Lab</a> as well as an editor and author of the blog <a
- href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/">Methods Bites</a>. <br>  <br>
+ href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. I am also an editor and frequent author at <a
+ href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/">Methods Bites</a>, Blog of the <a
+ href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/page/about/">MZES Social Science Data Lab</a>, an event series which I have co-organized since 2018. <br>  <br>
  My research focus lies at the intersection of political preference formation, electoral behavior
  and political competition.
  My methodological interests include quantitative approaches to the
@@ -21,56 +21,4 @@ layout: home
  <a href="https://www.hu-berlin.de/">Humboldt-University Berlin</a> (2013) and an MSc in Political Economy
  from the <a href="http://essex.ac.uk/">University of Essex</a> (2014).
  Prior to joining the <a
- href="https://www.mzes.uni-mannheim.de/d7/en">MZES</a>, I finished my PhD at the <a href="https://www.bgss.hu-berlin.de/de/bgss/">Berlin Graduate School
- of Social Sciences</a> at <a href="https://www.hu-berlin.de/">Humboldt University of Berlin</a>, where I also worked as a research associate in the <a href="https://www.sowi.hu-berlin.de/en/lehrbereiche-en/comppol-en">Comparative Politics Unit</a>.</p>
- <br/>
-
-
-<h2 id="news">News</h2>
-
-<section class="archive">
-{% for post in site.posts %}
-{% unless post.next %}
-
-  {% unless forloop.first %}
-    </div>
-  </div>
-  {% endunless %}
-
-  <div class="archive-item fadeInDown animated">
-    <h2>{{ post.date | date: '%Y' }}</h2>
-    <div>
-
-{% else %}
-
-{% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-{% capture next_year %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-
-{% if year != next_year %}
-
-  {% unless forloop.first %}
-    </div>
-  </div>
-  {% endunless %}
-
-  <div class="archive-item fadeInDown animated">
-    <h2>{{ post.date | date: '%Y' }}</h2>
-    <div>
-
-{% endif %}
-{% endunless %}
-
-  <article>
-    <a href="{{ post.url | absolute_url }}" title="{{ post.title }}">{{ post.title }}</a>
-    <div class="post-date">
-      <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: "%-d %B" }}</time>
-    </div>
-  </article>
-
-  {% if forloop.last %}
-    </div>
-  </div>
-  {% endif %}
-
-{% endfor %}
-</section>
+ href="https://www.mzes.uni-mannheim.de/d7/en">MZES</a>, I finished my PhD at <a href="https://www.hu-berlin.de/">Humboldt University of Berlin</a> (2018).</p>
