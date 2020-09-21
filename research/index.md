@@ -16,17 +16,29 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting](bsap). *Po
 
 ###### Forthcoming
 
-* [Ökonomisches Risiko und die elektorale Anziehungskraft der AfD (Economic Risk and the Electoral Appeal of the AfD)](afd).  *Wahlen und Wähler. Analysen aus Anlass der Bundestagswahl 2017*.
+* [Ökonomisches Risiko und die elektorale Anziehungskraft der AfD (Economic Risk and the Electoral Appeal of the AfD)](afd). *Wahlen und Wähler. Analysen aus Anlass der Bundestagswahl 2017*.
+
+
+#### Under Review
+
+* [The Centre-Right versus the Radical Right: The Role of Migration Issues and Economic Grievances](crvsrr) (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Markus Wagner](https://www.wagnermarkus.net/))
+* [Does Accommodation Work? Mainstream Party Strategies and the Success of Radical Right Parties](daw) (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/))
+
 
 #### Working Papers
-* [Economic Risk, Anti-Immigration Preferences, and Voting for the
-Radical Right](eraipvrr)
-* [Does Accommodation Work? Mainstream Party Strategies and the Success of Radical Right Parties](daw) (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/))
-* [Responding to the Radical Right Challenge:
-Party Shifts and Voter Reactions](rttrrc) (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/))
-* [Too Far Out to Care? Incentives for Coalition-Directed Voting among
-  Extreme and Centrist Voters](tfotc)
+
+* [Economic Risk, Anti-Immigration Preferences, and Voting for the Radical Right](eraipvrr)
+* [Why We Shouldn't Use 83.4% Confidence Intervals](wwsu834cis)
+* [How To Model Multi-Party Competition in a Transforming Political Space?](htmmpc) (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/))
+* [Public Support for Gender Equality and the Nomination of Female Candidates: Evidence from the UK, 1992-2017](psfge) (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
+* [Gender, Candidate Nomination, and Voter Support](gcnv) (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
+
 
 #### Work in Progress
-* [Gender, Candidate Nomination, and Voter Support](gcnv) (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
-* [Risk Dynamics: Economic Trajectories and Political Reactions](riskdyn) (with [Thomas Kurer](https://thomaskurer.net/))
+
+* Local Housing Markets, Rent
+Loads, and Party Preferences (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Thomas Kurer](https://thomaskurer.net/))
+* Regional Labor Markets and the Politics of
+Resentment (with [Sergi Pardos-Prado](https://sergipardos.wixsite.com/sergipardos))
+* Risk Dynamics: Economic Trajectories and Political Reactions
+* Applied Causal Inference (with R). Textbook, under contract with Chapman & Hall/CRC, expected 2022 (with [Paul C. Bauer](https://sites.google.com/view/paulcbauer)).

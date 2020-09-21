@@ -1,6 +1,0 @@
----
-layout: page
-title: Looming Threats of Loss. Introducing and Validating a Sectoral-Occupational Model of Economic Risk
----
-
-A growing body of research in political economy and political behavior emphasizes the role of individuals' exposure to economic insecurity in structuring their political preferences and voting behavior. Although conceptually unified in its focus on latent threats of dropping out of (stable), existing research remains divided as to which characteristics structure objective economic risk in subjectively and behaviorally meaningful ways. This paper introduces a sectoral-occupational conceptual model of economic risk which combines information on individuals' concurrent membership in economic sectors and occupational classes with socio-demographic, socio-geographic, and household characteristics in order to derive individuals' risk exposure. I implement the proposed conceptualization by employing a cross-classified hierarchical estimation strategy which allows for the inclusion of multiple predictors of risk and overcomes the problem of empirical sparsity in sectoral-occupational subgroups. Empirical applications validate my conceptual model against subjective measures of economic insecurity and demonstrate its predictive capacity for political preferences and political behavior in cross-national and longitudinal perspectives.
