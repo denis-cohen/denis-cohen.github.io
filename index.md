@@ -22,4 +22,4 @@ layout: home
         from the <a href="http://essex.ac.uk/">University of Essex</a> (2014).
         Prior to joining the <a
         href="https://www.mzes.uni-mannheim.de/d7/en">MZES</a>, I finished my PhD at <a href="https://www.hu-berlin.de/">Humboldt University of Berlin</a> (2018).
- </p>
+</p>
