@@ -1,4 +1,4 @@
-Ôªø---
+---
 layout: page
 title: Teaching
 ---
@@ -39,9 +39,9 @@ title: Teaching
 <a
  href="http://www.essex.ac.uk/government/">University of Essex</a>. 10/2014.
 * Statistik II. Undergraduate course by <a
- href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Gro√ü</a>, <a
+ href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Groﬂ</a>, <a
  href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 04/2011 - 09/2011.
 * Statistik I. Undergraduate course by <a
- href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Gro√ü</a>, <a
+ href="http://www.uni-tuebingen.de/fakultaeten/wirtschafts-und-sozialwissenschaftliche-fakultaet/faecher/soziologie/institut/personal-nach-funktionen/prof-dr-martin-gross.html">Prof. Martin Groﬂ</a>, <a
  href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2010 - 03/2011.
 
