@@ -4,13 +4,13 @@ title: Teaching
 ---
 
 <style>
-	ul.yr {
-	list-style: none;
-	margin-left: 0;
-	padding-left: 1em;
-	text-indent: -1em;
-	}
-	</style>
+        ul.yr {
+                list-style: none;
+                margin-left: 0;
+                padding-left: 1em;
+                text-indent: -1em;
+        }
+</style>
 
 #### Current Courses
 
