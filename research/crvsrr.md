@@ -1,0 +1,6 @@
+---
+layout: page
+title: "The Centre-Right versus the Radical Right: The Role of Migration Issues and Economic Grievances"
+---
+
+Radical-right parties are strong competitors of the centre-right in many party systems. In this article, we first show that the centre-right's overall stability in terms of vote share masks clear patterns of competition between these two party groups. We then study the attitudinal determinants of the choice between centre-right and radical-right parties, paying particular attention to the impact of the economic crisis of 2008 and the migration crisis of 2015. Using European Social Survey data from 2002 onwards, we show that the role of anti-migration views and economic grievances as predictors of the choice for radical right versus centre-right parties has strengthened over time. We then examine whether accommodating positional shifts by centre-right parties are successful in attracting potential radical-right voters. Our analyses of voter transitions using election study data show that this is not the case.  

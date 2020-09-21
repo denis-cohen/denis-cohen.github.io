@@ -16,7 +16,7 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting](bsap). *Po
 
 ###### Forthcoming
 
-* [Ökonomisches Risiko und die elektorale Anziehungskraft der AfD (Economic Risk and the Electoral Appeal of the AfD)](afd).  *Wahlen und WÃ¤hler. Analysen aus Anlass der Bundestagswahl 2017*.
+* [Ökonomisches Risiko und die elektorale Anziehungskraft der AfD (Economic Risk and the Electoral Appeal of the AfD)](afd).  *Wahlen und Wähler. Analysen aus Anlass der Bundestagswahl 2017*.
 
 #### Working Papers
 * [Economic Risk, Anti-Immigration Preferences, and Voting for the
