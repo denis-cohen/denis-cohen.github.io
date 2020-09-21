@@ -12,12 +12,7 @@ title: Teaching
         }
 </style>
 
-#### Current Courses
-
-* <a href="https://portal2.uni-mannheim.de:443/portal2/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=22745&periodId=256&navigationPosition=studiesOffered,searchCourses">Lecture Multivariate Analyses</a>. Graduate seminar, <a href="https://www.sowi.hu-berlin.de/">University of Mannheim</a>. 09/2019 - 12/2019.
-
 #### Past Courses
-
 * <a href="https://portal2.uni-mannheim.de/portal2/pages/cm/exa/coursemanagement/basicCourseData.xhtml?_flowId=searchCourseNonStaff-flow&_flowExecutionKey=e1s4">Tutorial Multivariate Analyses</a>. Graduate seminar, <a href="https://www.sowi.hu-berlin.de/">University of Mannheim</a>. 09/2019 - 12/2019.
 * <a href="https://portal2.uni-mannheim.de/portal2/pages/cm/exa/coursecatalog/showCourseCatalog.xhtml?_flowId=showCourseCatalog-flow&_flowExecutionKey=e1s8">Socio-Structural Explanations of Political Behavior</a>. Undergraduate seminar, <a href="https://www.sowi.hu-berlin.de/">University of Mannheim</a>. 02/2019 - 08/2019. <a href="syllabus_ssepb19.pdf">[syllabus]</a>
 * <a href="https://agnes.hu-berlin.de/lupo/rds?state=verpublish&status=init&vmfile=no&publishid=138894&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung">Explaining Political Preferences - Theory, Empirics & Applications</a>. Undergraduate specialization module, <a href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 04/2018 - 09/2018. <a href="syllabus_epp18.pdf">[syllabus]</a>
@@ -27,7 +22,6 @@ title: Teaching
  href="https://www.sowi.hu-berlin.de/">HU Berlin</a>. 10/2017 - 03/2018.
  
 #### Past Teaching Assistance
-
 * Applied Data Analysis. Graduate course by <a
  href="http://mark-kayser.com/">Prof. Mark A. Kayser</a>, <a
  href="https://www.hertie-school.org/en/">Hertie School of Governance</a>. 09/2016 - 12/2016.
