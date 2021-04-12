@@ -9,6 +9,10 @@
   box-sizing: border-box;
 }
 
+html {
+font-size: 12px;
+}
+
 body {
   background-color: #f5f5f5;
   color: #333;
