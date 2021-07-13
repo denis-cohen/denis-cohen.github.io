@@ -3,15 +3,15 @@ layout: home
 ---
 
 <p style="text-align:justify">
-        <img alt="Denis Cohen" src="assets/images/logo5.1.png"
+        <img alt="Denis Cohen" src="assets/images/logo6.png"
         style="float:right;margin:5px 0px 10px
         30px;width:260px">
         I am a postdoctoral fellow in the <a
         href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a
         href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a
-        href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. I am also an editor and frequent author at <a
-        href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/">Methods Bites</a>, Blog of the <a
-        href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/page/about/">MZES Social Science Data Lab</a>, an event series which I have co-organized since 2018. <br>  <br>
+        href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. I am also co-organizer of the <a
+        href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/page/about/">MZES Social Science Data Lab</a> and a co-editor of the blog <a
+        href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/">Methods Bites</a>. <br>  <br>
         My research focus lies at the intersection of political preference formation, electoral behavior
         and political competition.
         My methodological interests include quantitative approaches to the
