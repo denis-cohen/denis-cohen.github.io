@@ -1,0 +1,16 @@
+base
+rmarkdown
+knitr
+dplyr
+usethis
+devtools
+htmlwidgets
+widgetframe
+RefManageR
+bibtex
+bib2df
+ggplot2
+plotly
+magick
+kableExtra
+icon
