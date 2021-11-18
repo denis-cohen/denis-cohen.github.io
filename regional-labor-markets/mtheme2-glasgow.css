@@ -1,6 +1,14 @@
+:root {
+  --mzes-white: #FFFFFF;
+  --mzes-cyan: #003865;
+  --mzes-gold: #7D2239;
+  --mzes-cyan-light: #809CB2;
+  --mzes-gold-light: #BE919C;
+}
+
 .remark-slide-content {
-  background-color: #FFFFFF;
-  border-top: 80px solid #FFFFFF;
+  background-color: var(--mzes-white);
+  border-top: 80px solid var(--mzes-white);
   font-size: 24px;
   font-weight: 300;
   line-height: 1.5;
@@ -8,21 +16,21 @@
 }
 
 .title-slide .inverse .remark-slide-content {
-  background-color: #FFFFFF;
+  background-color: var(--mzes-white);
 }
 
 .inverse {
-  background-color: #FFFFFF;
+  background-color: var(--mzes-white);
   text-shadow: none;
 }
 
 /* Removes colored bar from top of the slide resulting in a clear slide */
 .clear{
-  border-top: 0px solid #FFFFFF;
+  border-top: 0px solid var(--mzes-white);
 }
 
 .clear .inverse {
-  border-top: 0px solid #FFFFFF;
+  border-top: 0px solid var(--mzes-white);
 }
 
 .clear .remark-slide-number {
@@ -33,18 +41,18 @@
   display: none;
 }
 
-.mline .remark-slide-number {
-  display: none;
-}
-
-.mline .inverse .remark-slide-number {
-  display: none;
-}
-
 .remark-slide-number {
   position: absolute;
   bottom: 601px;
   left: 0;
+  right: 0;
+}
+
+.mline .remark-slide-number { 
+  position: absolute;
+  bottom: 325.5px;
+  left: 48px;
+  right: 48px;
 }
 
 .remark-slide-number .progress-bar-container {
@@ -56,22 +64,31 @@
   right: 0;
 }
 
+.mline .remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 20;
+  height: 2px;
+  display: block;
+  left: 15px;
+  right: 15px;
+}
+
 .remark-slide-number .progress-bar {
   height: 100%;
-  background-color: #d1a354;
+  background-color: var(--mzes-gold);
 }
 
 h1 {
   font-weight: normal;
   margin-top: -95px;
   margin-left: -00px;
-  color: #007696;
+  color: var(--mzes-cyan);
 }
 
 h2, h3, h4 {
   padding-top: -15px;
   padding-bottom: 00px;
-  color: #007696;
+  color: var(--mzes-cyan);
   text-shadow: none;
   font-weight: 400;
   text-align: left;
@@ -100,19 +117,19 @@ h2, h3, h4 {
 }
 
 .left-column h2, .left-column h3, .left-column h4 {
-  color: #007696;
+  color: var(--mzes-cyan);
 }
 
 .left-column h2:last-of-type, .left-column h3:last-child {
-  color: #007696;
+  color: var(--mzes-cyan);
 }
 
 .title-slide {
-  background-color: #FFFFFF;
+  background-color: var(--mzes-white);
 }
 
 .title-slide h1 {
-  color: #007696;
+  color: var(--mzes-cyan);
   font-size: 40px;
   text-shadow: none;
   font-weight: 400;
@@ -123,7 +140,7 @@ h2, h3, h4 {
 .title-slide h2 {
   margin-top: -25px;
   padding-bottom: -20px;
-  color: #007696;
+  color: var(--mzes-cyan);
   text-shadow: none;
   font-weight: 300;
   font-size: 24px;
@@ -140,29 +157,50 @@ h2, h3, h4 {
 }
 
 .inverse h1, .inverse h2, .inverse h3 {
-  color: #007696;
+  color: var(--mzes-cyan);
 }
 
-hr, .title-slide h2::after, .mline h1::after {
+hr, h1::after {
   content: '';
   display: block;
   border: none;
-  background-color: #d1a354;
-  color: #d1a354;
+  background-color: var(--mzes-gold-light);
+  color: var(--mzes-gold-light);
   height: 2px;
+  margin-left: -48px;
+  margin-right: -48px;
+  margin-top: 3.5px;
 }
 
 hr, .mline h1::after {
-  margin: 1em 15px 0 15px;
-  color: #007696;
-}
-
-.title-slide h2::after {
-  margin: 36px 15px 48px 0;
+  content: '';
+  display: block;
+  border: none;
+  background-color: var(--mzes-gold-light);
+  color: var(--mzes-gold-light);
+  height: 2px;
 }
 
 .mline h1::after {
   margin: 10px 15px 0 15px;
+}
+
+
+hr, .title-slide h1::after {
+  display:none;
+}
+
+hr, .title-slide h2::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: var(--mzes-gold);
+  color: var(--mzes-gold);
+  height: 2px;
+}
+
+.title-slide h2::after {
+  margin: 36px 15px 48px 0;
 }
 
 .remark-slide-number {
@@ -184,7 +222,7 @@ hr, .mline h1::after {
 .remark-inline-code {
   /* background: #F5F5F5; /* lighter */
   /* background: #e7e8e2; /* darker */
-  color: #007696;
+  color: var(--mzes-cyan);
   border-radius: 3px;
   padding: 4px;
 }
@@ -334,13 +372,13 @@ hr, .mline h1::after {
 }
 
 .mjx-chtml {
-  color: #d1a354;
+  color: var(--mzes-gold);
 }
 
 table, tbody, tr, th, td{
   background-color: rgba(0, 0, 0, 0.0) !important;
   border-collapse: collapse;
-  padding: 0 0 0 0;
+  padding: 0.0 0.5
 }
 
 table.authors {
@@ -378,20 +416,20 @@ table.contact td, table.contact th {
 }
 
 a, a > code {
- color: #007696;
+ color: var(--mzes-cyan);
  text-decoration: none;
 }
 
 .cyan {
-  color: #007696;
+  color: var(--mzes-cyan);
 }
 
 .gold {
-  color: #d1a354;
+  color: var(--mzes-gold);
 }
 
 blockquote {
-  border-left: solid 5px #D1E6EC;
+  border-left: solid 5px var(--mzes-cyan-light);
   padding-left: 1em;
   font-size: 75%;
 }

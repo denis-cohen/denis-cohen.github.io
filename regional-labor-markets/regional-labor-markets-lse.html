@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Regional Labor Markets and the Politics of Resentment</title>
+    <title>Regional Labor Markets and Anti-Immigration Attitudes</title>
     <meta charset="utf-8" />
-    <link href="regional-labor-markets_files/remark-css/default.css" rel="stylesheet" />
-    <link href="regional-labor-markets_files/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="mtheme2.css" type="text/css" />
+    <link href="regional-labor-markets-lse_files/remark-css/default.css" rel="stylesheet" />
+    <link href="regional-labor-markets-lse_files/font-awesome/css/fontawesome-all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="mtheme2-glasgow.css" type="text/css" />
     <link rel="stylesheet" href="fonts_mtheme.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Regional Labor Markets and the Politics of Resentment
-## Regional unemployment risks, inter-regional relocation, and anti-immigration sentiment
+# Regional Labor Markets and Anti-Immigration Attitudes
 ### <table class="authors">
 <tbody>
 <tr>
@@ -62,7 +61,7 @@ Sergi Pardos-Prado
 </tr>
 </tbody>
 </table>
-### Humboldt Political Behavior Workshop <br /> September 10, 2021
+### LSE Political Behaviour Seminar <br /> November 18, 2021
 
 ---
 
@@ -245,8 +244,9 @@ class: inverse, mline, center, middle
 
 # Regional unemployment risks
 
+
 &lt;div class="figure"&gt;
-&lt;img src="regional-labor-markets_files/figure-html/risk-1.png" alt="Note: Regional-occupational unemployment risks by Oesch classes." width="100%" /&gt;
+&lt;img src="regional-labor-markets_files/figure-html/ras_risk_oesch8.png" alt="Note: Regional-occupational unemployment risks by Oesch classes." width="100%" /&gt;
 &lt;p class="caption"&gt;Note: Regional-occupational unemployment risks by Oesch classes.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -283,25 +283,23 @@ class: inverse, mline, center, middle
 
 # Aggregate-level analysis
 
-- Cross-sectional analysis at the level of 401 counties (2017 boundaries)
-- Pooled information over time (1999-2017)
+- TSCS analyses at the level of 401 counties (2017 boundaries) over time (1999-2017)
+- Between effects as well as within effects using unit FE and twoway FE
 
 --
 
 ### Key variables
 
-- Aggregate-level anti-immigration sentiment in county `\(j\)`
-- Average proportion of inter-regional risk-reducing movers in county `\(j\)`
+- Average anti-immigration sentiment in county `\(j\)`
+- Average percentage of inter-regional risk-reducing movers in county `\(j\)`
 - Both estimated from survey data using a global smoothing approach via multi-level regression with county-level predictors
 
 --
 
-### Controls
+### County-level covariates
 
-- Avg. unemployment risk
-- Avg. annual change in unemployment risk
-- East/West
-- Rural/suburban/urban
+- .cyan[Economic:] unemployment rate, % in labor force, % high-skilled labor force
+- .cyan[Demographic:] % foreign-born, % female, mean age
 
 
 
@@ -319,7 +317,7 @@ class: inverse, mline, center, middle
 
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="regional-labor-markets_files/figure-html/irm1-1.png" alt="Note: Within-effects of a five percentage-point decrease in region-occupational unemployment risk on inter-regional residential relocations." width="50%" /&gt;
+&lt;img src="regional-labor-markets-lse_files/figure-html/irm1-1.png" alt="Note: Within-effects of a five percentage-point decrease in region-occupational unemployment risk on inter-regional residential relocations." width="50%" /&gt;
 &lt;p class="caption"&gt;Note: Within-effects of a five percentage-point decrease in region-occupational unemployment risk on inter-regional residential relocations.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -329,7 +327,7 @@ class: inverse, mline, center, middle
 # Risk and inter-regional relocation
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="regional-labor-markets_files/figure-html/irm2-1.png" alt="Note: Conditional within-effects of a five percentage-point decrease in region-occupational unemployment risk on inter-regional residential relocations as a function of absolute skill specificity." width="75%" /&gt;
+&lt;img src="regional-labor-markets-lse_files/figure-html/irm2-1.png" alt="Note: Conditional within-effects of a five percentage-point decrease in region-occupational unemployment risk on inter-regional residential relocations as a function of absolute skill specificity." width="75%" /&gt;
 &lt;p class="caption"&gt;Note: Conditional within-effects of a five percentage-point decrease in region-occupational unemployment risk on inter-regional residential relocations as a function of absolute skill specificity.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -338,7 +336,7 @@ class: inverse, mline, center, middle
 # Risk, relocation &amp; anti-immigration sentiment
 
 &lt;div class="figure" style="text-align: center"&gt;
-&lt;img src="regional-labor-markets_files/figure-html/wim-1.png" alt="Note: Within-effects of a five percentage-point decrease in region-occupational unemployment risk on anti-immigration concerns." width="100%" /&gt;
+&lt;img src="regional-labor-markets-lse_files/figure-html/wim-1.png" alt="Note: Within-effects of a five percentage-point decrease in region-occupational unemployment risk on anti-immigration concerns." width="100%" /&gt;
 &lt;p class="caption"&gt;Note: Within-effects of a five percentage-point decrease in region-occupational unemployment risk on anti-immigration concerns.&lt;/p&gt;
 &lt;/div&gt;
 
@@ -346,69 +344,18 @@ class: inverse, mline, center, middle
 
 # County-level anti-immigration sentiment
 
-&lt;table&gt;
-&lt;caption&gt;Note: OLS estimates based on 401 German counties.&lt;/caption&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;  &lt;/th&gt;
-   &lt;th style="text-align:center;"&gt; Model 1 &lt;/th&gt;
-   &lt;th style="text-align:center;"&gt; Model 2 &lt;/th&gt;
-   &lt;th style="text-align:center;"&gt; Model 3 &lt;/th&gt;
-   &lt;th style="text-align:center;"&gt; Model 4 &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Proportion of IRRR movers &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; -0.71 &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; -0.49 &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; -0.50 &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; -0.32 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; [-1.03; -0.40] &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; [ -0.81; -0.18] &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; [ -0.81; -0.18] &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; [-0.62; -0.01] &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Avg. risk &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Avg. change in risk &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; East &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Suburban &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Urban &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt;  &lt;/td&gt;
-   &lt;td style="text-align:center;"&gt; incl. &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+
+Table: Effects of inter-regional risk reducing movers (% IRRRM) on county-level anti-immigration sentiment.
+
+|           |        BE 1        |        BE 2        |     Unit FE 1      |     Unit FE 2      |     Twoway FE 1      |    Twoway FE 2     |
+|:----------|:------------------:|:------------------:|:------------------:|:------------------:|:--------------------:|:------------------:|
+|% IRRRM    |      -0.0739       |      -0.0264       |      -0.0380       |      -0.0286       |       -0.00453       |      -0.0079       |
+|           | [-0.0918; -0.0561] | [-0.0397; -0.0130] | [-0.0436; -0.0325] | [-0.0349; -0.0224] | [-0.00830; -0.00075] | [-0.0114; -0.0043] |
+|Covariates |                    |      &amp;#10003;      |                    |      &amp;#10003;      |                      |      &amp;#10003;      |
+|Unit FE    |                    |                    |      &amp;#10003;      |      &amp;#10003;      |       &amp;#10003;       |      &amp;#10003;      |
+|Year FE    |                    |                    |                    |                    |       &amp;#10003;       |      &amp;#10003;      |
+|N Units    |        401         |        401         |        401         |        401         |         401          |        401         |
+|N Year     |                    |                    |         19         |         19         |          19          |         19         |
 
 ---
 
@@ -580,7 +527,7 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
 })(document);</script>
 <style>
 .logo {
-  background-image: url('mzes-logo-solo-4c.png');
+  background-image: url('png-transparent-university-of-glasgow-glasgow-university-shinty-club-graduate-university-student-student-blue-text-people.png');
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
