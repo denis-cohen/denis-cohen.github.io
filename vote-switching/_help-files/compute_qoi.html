@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Compute MAVCL quantities of interest</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for compute_qoi {voteswitchR}"><tr><td>compute_qoi {voteswitchR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Compute MAVCL quantities of interest</h2>
+
+<h3>Description</h3>
+
+<p>Computes quantities of interest such as conditional expectations
+and average marginal effects/first differences from a MAVCL estimation
+object.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+compute_qoi(
+  mavcl_object,
+  y_structure,
+  posterior_quantiles = c(0.5, 0.025, 0.975),
+  full_posterior = FALSE,
+  len_continuous_sequence = 21L,
+  conditional_expectation = TRUE,
+  average_marginal_effect = TRUE,
+  ame_shift = "tiny",
+  base = c("t", "tm1", "avg"),
+  relative = TRUE,
+  atmeans = FALSE,
+  re_null = FALSE
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mavcl_object</code></td>
+<td>
+<p>An estimation object of class <code>mavcl_est</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>y_structure</code></td>
+<td>
+<p>Structure of switching patterns, as generated
+by <code>voteswitchR::recode_switches()</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>posterior_quantiles</code></td>
+<td>
+<p>A numeric vector of quantile values for the
+posterior quantile summaries.</p>
+</td></tr>
+<tr valign="top"><td><code>full_posterior</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, the full posterior draws
+will be return alongside the posterior quantile summaries.</p>
+</td></tr>
+<tr valign="top"><td><code>len_continuous_sequence</code></td>
+<td>
+<p>Suggested length of the value sequence for
+continuous predictors and/or moderators.</p>
+</td></tr>
+<tr valign="top"><td><code>conditional_expectation</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, conditional
+expectations (a.k.a. &quot;expected values&quot; or &quot;predicitions&quot;) will be returned.</p>
+</td></tr>
+<tr valign="top"><td><code>average_marginal_effect</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, average marginal
+effects (continuous main predictor) or average first difference (categorical
+main predictor) will be returned.</p>
+</td></tr>
+<tr valign="top"><td><code>base</code></td>
+<td>
+<p>Specifies whether the denominator for the normalization of
+relative quantities of interest. Can be <code>"t"</code> for parties' electorates
+at t, <code>"tm1"</code> for parties' electorates at t - 1, or <code>"avg"</code> for
+parties' average inter-election electorates.</p>
+</td></tr>
+<tr valign="top"><td><code>relative</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, the returned quantities of interest
+are normalized by <code>base</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>atmeans</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, quantities of interest will be
+calculated for an average observation. If <code>FALSE</code>, quantities will be
+calculated at the observed values of all observations and then averaged.</p>
+</td></tr>
+<tr valign="top"><td><code>re_null</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>,only the &quot;fixed&quot; portion of the model
+coefficients will be used and the &quot;random&quot; portion discarded.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Returns a nested list of class <code>voteswitchR_qoi</code> that contains
+the requested quantities.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>voteswitchR</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Run the MAVCL model</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for run_mavcl {voteswitchR}"><tr><td>run_mavcl {voteswitchR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Run the MAVCL model</h2>
+
+<h3>Description</h3>
+
+<p>Runs the Mixed Aggregate Varying Choice Set Logit (MAVCL)
+model via <code>rstan</code>. By default, the model includes election-cell-specific
+intercepts (i.e., random intercepts for each cell of an election-specific
+voter transition matrix).
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+run_mavcl(
+  data,
+  y_names,
+  null_model = FALSE,
+  main_predictor,
+  predictor_continuous = TRUE,
+  moderator = NULL,
+  moderator_continuous = TRUE,
+  other_covariates = NULL,
+  random_slopes = FALSE,
+  re_parties = FALSE,
+  re_elections = FALSE,
+  re_countries = FALSE,
+  iter = 2000L,
+  warmup = 1000L,
+  thin = 2L,
+  chains = 2L,
+  cores = parallel::detectCores(),
+  max_treedepth = 15,
+  adapt_delta = 0.8,
+  seed,
+  parallelize = FALSE,
+  savename = "mavcl"
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>data</code></td>
+<td>
+<p>A data object generated via <code>voteswitchR::build_data_file()</code>
+and processed via <code>voteswitchR::recode_switches()</code>. Can be a single
+<code>tbl_df</code>/<code>tbl</code>/<code>data.frame</code> or, in the case multiply imputed vote
+switching counts, a list thereof.</p>
+</td></tr>
+<tr valign="top"><td><code>y_names</code></td>
+<td>
+<p>A vector of column names for vote switching counts, as generated
+by <code>voteswitchR::recode_switches</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>null_model</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, the function runs a null model without any
+right-hand side variables.</p>
+</td></tr>
+<tr valign="top"><td><code>main_predictor</code></td>
+<td>
+<p>Column name of the main predictor of interest.</p>
+</td></tr>
+<tr valign="top"><td><code>predictor_continuous</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, the predictor is treated
+as continuous; if <code>FALSE</code>, it is treated as a factor.</p>
+</td></tr>
+<tr valign="top"><td><code>moderator</code></td>
+<td>
+<p>Column name of a moderator to be interacted with the main
+predictor or <code>NULL</code> if there is no moderator.</p>
+</td></tr>
+<tr valign="top"><td><code>moderator_continuous</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, the moderator is treated
+as continuous; if <code>FALSE</code>, it is treated as a factor.</p>
+</td></tr>
+<tr valign="top"><td><code>other_covariates</code></td>
+<td>
+<p>Character vector that specifies the column name of
+background covariates. Note: Categorical variables must be passed as factors
+via <code>data</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>random_slopes</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, the slopes for the main predictor
+are allowed to vary by cell.</p>
+</td></tr>
+<tr valign="top"><td><code>re_parties</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, higher-level cell-specific
+intercepts at the level of <code>voteswitchR::mappings$party_harmonized</code>
+are added.</p>
+</td></tr>
+<tr valign="top"><td><code>re_elections</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, higher-level cell-specific
+intercepts at the level of <code>voteswitchR::mappings$elec_id</code>
+are added. Note: Should only be used when studying party-electorates.</p>
+</td></tr>
+<tr valign="top"><td><code>re_countries</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, higher-level cell-specific
+intercepts at the level of <code>voteswitchR::mappings$iso2c</code>
+are added.</p>
+</td></tr>
+<tr valign="top"><td><code>iter</code></td>
+<td>
+<p>A positive integer specifying the number of iterations for each 
+chain (including warmup). The default is 2000.</p>
+</td></tr>
+<tr valign="top"><td><code>warmup</code></td>
+<td>
+<p>A positive integer specifying the number of warmup (aka burnin)
+iterations per chain. If step-size adaptation is on (which it is by default), 
+this also controls the number of iterations for which adaptation is run (and
+hence these warmup samples should not be used for inference). The number of 
+warmup iterations should be smaller than <code>iter</code> and the default is
+<code>iter/2</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>thin</code></td>
+<td>
+<p>A positive integer specifying the period for saving samples. 
+The default is 1, which is usually the recommended value.</p>
+</td></tr>
+<tr valign="top"><td><code>chains</code></td>
+<td>
+<p>A positive integer specifying the number of Markov chains. 
+The default is 4.</p>
+</td></tr>
+<tr valign="top"><td><code>cores</code></td>
+<td>
+<p>Number of cores to use when executing the chains in parallel,
+which defaults to 1 but we recommend setting the <code>mc.cores</code> option 
+to be as many processors as the hardware and RAM allow (up to the 
+number of chains).</p>
+</td></tr>
+<tr valign="top"><td><code>seed</code></td>
+<td>
+<p>The seed for random number generation. The default is generated 
+from 1 to the maximum integer supported by <span style="font-family: Courier New, Courier; color: #666666;"><b>R</b></span> on the machine. Even if 
+multiple chains are used, only one seed is needed, with other chains having 
+seeds derived from that of the first chain to avoid dependent samples.
+When a seed is specified by a number, <code>as.integer</code> will be applied to it. 
+If <code>as.integer</code> produces <code>NA</code>, the seed is generated randomly. 
+The seed can also be specified as a character string of digits, such as
+<code>"12345"</code>, which is converted to integer.</p>
+</td></tr>
+<tr valign="top"><td><code>parallelize</code></td>
+<td>
+<p>Logical; if <code>TRUE</code>, estimation is not only parallelized
+within imputations but concurrently across imputations. Note: This initializes
+many processes and is only recommended if sufficient cores are available.</p>
+</td></tr>
+<tr valign="top"><td><code>savename</code></td>
+<td>
+<p>A character that specifies the file name of a log file.</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Returns an object of class <code>mavcl_est</code>: A list that
+includes estimates and auxiliary information.
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>voteswitchR</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>

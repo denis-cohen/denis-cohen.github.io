@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>R: Calculate the MAEs and RMSEs of MAVCL Predictions</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="R.css" />
+</head><body>
+
+<table width="100%" summary="page for calculate_pred_error {voteswitchR}"><tr><td>calculate_pred_error {voteswitchR}</td><td style="text-align: right;">R Documentation</td></tr></table>
+
+<h2>Calculate the MAEs and RMSEs of MAVCL Predictions</h2>
+
+<h3>Description</h3>
+
+<p>Uses an object of class <code>mavcl_est</code> and calculates
+prediction errors of posterior means or medians.
+</p>
+
+
+<h3>Usage</h3>
+
+<pre>
+calculate_pred_error(
+  mavcl_object,
+  posterior = c("mean", "median"),
+  type = c("mae", "rmse"),
+  re_null = FALSE
+)
+</pre>
+
+
+<h3>Arguments</h3>
+
+<table summary="R argblock">
+<tr valign="top"><td><code>mavcl_object</code></td>
+<td>
+<p>An object of class <code>mavcl_est</code>.</p>
+</td></tr>
+<tr valign="top"><td><code>posterior</code></td>
+<td>
+<p><code>"mean"</code> or <code>"median"</code>, depending on whether posterior
+means or medians should be evaluated against the observed proportions of the
+outcome variable.</p>
+</td></tr>
+<tr valign="top"><td><code>type</code></td>
+<td>
+<p><code>"mae"</code> or <code>"rmse"</code>, depending on whether (mean) average
+errors or the root mean squared standard error should be reported</p>
+</td></tr>
+<tr valign="top"><td><code>re_null</code></td>
+<td>
+<p>logical, specifies whether the prediction should be calculated
+with (<code>FALSE</code>) or without (<code>TRUE</code>) random effects</p>
+</td></tr>
+</table>
+
+
+<h3>Value</h3>
+
+<p>Returns a list with observation-/outcome-specific absolute errors and
+the overall mean absolute error (if <code>type == "mae"</code>) or the overall
+root mean squared error (if <code>type == "rmse"</code>)
+</p>
+
+<hr /><div style="text-align: center;">[Package <em>voteswitchR</em> version 0.1.0 <a href="00Index.html">Index</a>]</div>
+</body></html>
