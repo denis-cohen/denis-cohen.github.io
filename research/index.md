@@ -24,13 +24,13 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 
 ###### 2021
 
-* Ökonomisches Risiko und die elektorale Anziehungskraft der AfD (Economic Risk and the Electoral Appeal of the AfD). *Wahlen und Wähler. Analysen aus Anlass der Bundestagswahl 2017*. [[chapter]](https://link.springer.com/chapter/10.1007/978-3-658-33582-3_15)
+* Ã–konomisches Risiko und die elektorale Anziehungskraft der AfD (Economic Risk and the Electoral Appeal of the AfD). *Wahlen und WÃ¤hler. Analysen aus Anlass der Bundestagswahl 2017*. [[chapter]](https://link.springer.com/chapter/10.1007/978-3-658-33582-3_15)
 
 
 #### Working Papers and Ongoing Work
 
 * Simulating Party Shares (with [Chris Hanretty](http://chrishanretty.co.uk/))
-* Collective bargaining in coalition governments (with [Heike Klüver](http://www.heike-kluever.com/) and [Hanna Bäck](https://www.svet.lu.se/en/hanna-back))
+* Collective bargaining in coalition governments (with [Heike KlÃ¼ver](http://www.heike-kluever.com/) and [Hanna BÃ¤ck](https://www.svet.lu.se/en/hanna-back))
 * Regional Labor Markets and the Politics of
 Resentment (with [Sergi Pardos-Prado](https://sergipardos.wixsite.com/sergipardos))
 * How Perception of Support Drives Vote Switching to Challenger Parties (with [Daniel Bischof](https://danbischof.com/))
