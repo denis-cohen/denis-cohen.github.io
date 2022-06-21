@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Estimating legislator-level issue salience and issue positions from political text</title>
+    <meta charset="utf-8" />
+    <script src="epsa_files/header-attrs/header-attrs.js"></script>
+    <link href="epsa_files/remark-css/default.css" rel="stylesheet" />
+    <script src="epsa_files/htmlwidgets/htmlwidgets.js"></script>
+    <script src="epsa_files/d3-bundle/d3-bundle.min.js"></script>
+    <script src="epsa_files/d3-lasso/d3-lasso.min.js"></script>
+    <script src="epsa_files/save-svg-as-png/save-svg-as-png.min.js"></script>
+    <link href="epsa_files/ggiraphjs/ggiraphjs.min.css" rel="stylesheet" />
+    <script src="epsa_files/ggiraphjs/ggiraphjs.min.js"></script>
+    <script src="epsa_files/girafe-binding/girafe.js"></script>
+    <link rel="stylesheet" href="mtheme2.css" type="text/css" />
+    <link rel="stylesheet" href="fonts_mtheme.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Estimating legislator-level issue salience and issue positions from political text
+]
+.subtitle[
+## <br>
+]
+.author[
+### <table class="authors">
+<tbody>
+<tr>
+<td>
+Andreas Küpfer
+</td>
+<td>
+Denis Cohen
+</td>
+</tr>
+<tr>
+<td>
+.font75[Technical University of Darmstadt]
+</td>
+<td>
+.font75[University of Mannheim]
+</td>
+</tr>
+</tbody>
+</table>
+<table class="contact">
+<tbody>
+<tr>
+<td>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg> <a href="mailto:andreas.kuepfer@tu-darmstadt.de"><code>andreas.kuepfer@tu-darmstadt.de</code></a>
+</td>
+<td>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg> <a href="mailto:denis.cohen@mzes.uni-mannheim.de"><code>denis.cohen@mzes.uni-mannheim.de</code></a>
+</td>
+</tr>
+<tr>
+<td>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> <a href="https://twitter.com/ankuepfer"><code>@ankuepfer</code></a>
+</td>
+<td>
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> <a href="https://twitter.com/denis_cohen"><code>@denis_cohen</code></a>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td>
+<svg aria-hidden="true" role="img" viewBox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"/></svg> <a href="https://denis-cohen.github.io"><code>denis-cohen.github.io</code></a>
+</td>
+</tr>
+</tbody>
+</table>
+]
+.date[
+### EPSA 2022, Prague <br /> June 24, 2022
+]
+
+---
+
+
+class: inverse, mline, center, middle
+# A brief introduction...
+
+---
+
+&lt;!-- pagedown::chrome_print(rmarkdown::render(input = "rmd/EPSA_presentation.Rmd", output_file = "epsa.html"), "rmd/EPSA_presentation/epsa_presentation.pdf") --&gt;
+
+&lt;!-- Setup chunks --&gt;
+
+
+
+
+
+# Motivation
+
+* Existing automated approaches to estimating intra-party variation in legislator communication are typically limited to either issue salience or positional preference heterogeneity
+* However, joint knowledge of salience and positions unlocks valuable insights into MPs' personal platforms .cyan[.font70[(Budge and Farlie 1983a, 1983b, Meguid 2005)]]
+
+---
+
+# Summary of the paper
+
+* We introduce a novel three-step framework for the joint estimation of salience and position scores on legislator-level based on text using BERT .cyan[.font70[(Devlin et al. 2019)]] and hierarchical models
+* We showcase the framework in an empirical application using MPs' communication of housing in Germany on Twitter 
+* Our comparison with traditional classification and scaling approaches as well as with manual positional annotations of MPs shows a
+greater validity of the framework
+
+---
+
+class: inverse, mline, center, middle
+# Methodological Framework
+
+---
+
+# Methodological framework
+
+## Step 1: Data processing and manual annotation
+
+* Any  political  texts  covering  different  (sub-)policies  within  an  issue  domain  of interest (e.g. social media platforms, press releases, or legislative speeches)
+* Crawled  texts  can  be  pre-filtered  using  a  simple  dictionary  to  speed up the annotation process
+
+---
+
+# Methodological framework
+
+## Step 1: Data processing and manual annotation
+## Step 2: BERT prediction
+
+#### Advantages in a nutshell
+* Bidirectionality: Processing text in both directions
+* Attention: Consider each word’s surroundings to infer the context
+* Pre-training: Models are pre-trained on huge textual corpora
+
+#### Prediction phases
+1. Multilabel classification fine-tuning: Assign each political text to `\(0,...,N\)` issue domains (prediction based on full corpus of tweets)
+2. Multiclass classification fine-tuning: -1 (left), 0 (no position), or 1 (right) stance on an issue (prediction based on texts classified as belonging to relevant issue domains)
+
+---
+
+# Methodological framework
+
+## Step 1: Data processing and manual annotation
+## Step 2: BERT prediction
+## Step 3: Hierarchical multinomial logit models
+
+* Bayesian hierarchical multinomial logistic models with legislator-level covariates use partial pooling to predict legislator-level proportions across four categories, from which we derive the following:
+
+$$
+`\begin{align}
+\text{Salience}_{i} = 1 - \Pr(y_i = \text{unrelated} | \mathbf{x}_i)
+\end{align}`
+$$
+$$
+`\begin{align}
+\text{Position}_{i}^{LR} = \log(100 \times \Pr(y_i = \text{right} | \mathbf{x}_i) + 0.5) - \log(100 \times \Pr(y_i = \text{left} | \mathbf{x}_i) + 0.5)
+\end{align}`
+$$
+* Associational inference via substantial interpretation of systematic component of the model
+
+---
+
+class: inverse, mline, center, middle
+# Application
+
+---
+
+# Annotation
+
+* `\(&gt;\)` 2 million tweets from `\(\sim\)` 530 German MPs (19th Bundestag) on Twitter
+* Annotated for six different policies within two sub-domains ( `\(\kappa = 0.75\)` ): 
+    * market control (e.g. rental cap or social housing)
+    * supply-side subsidies (e.g. incentivize construction or facilitate acquisition of building land)
+
+
+&lt;img src="epsa_files/figure-html/annotation-plot-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Results: salience and position estimates
+
+
+&lt;img src="epsa_files/figure-html/sal-pos-plot-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+* `\(\sim\)` 30000 market control tweets
+* `\(\sim\)` 13000 supply-side subsidies tweets
+* Especially supply-side subsidies shows lopsided positional distribution
+
+---
+
+# Results: associational effects
+
+
+&lt;img src="epsa_files/figure-html/assoc-estimates-1.png" width="100%" style="display: block; margin: auto;" /&gt;
+
+---
+
+class: inverse, mline, center, middle
+# Validation
+
+---
+
+# BERT versus baseline models
+
+
+
+
+&lt;img src="epsa_files/figure-html/splitsize-salience-plot-1.png" style="display: block; margin: auto;" /&gt;
+
+---
+
+# Scaling: evaluation with manual annotations
+
+
+<div id="htmlwidget-eb5047593a1523cb0ec9" style="width:100%;height:2100px;" class="girafe html-widget"></div>
+<script type="application/json" data-for="htmlwidget-eb5047593a1523cb0ec9">{"x":{"html":"<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f' viewBox='0 0 576 288'>\n <defs>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c1'>\n   <rect x='0' y='0' width='576' height='288'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c2'>\n   <rect x='0' y='26.18' width='576' height='261.82'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c3'>\n   <rect x='0' y='77.26' width='288' height='159.66'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c4'>\n   <rect x='5.48' y='117.75' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c5'>\n   <rect x='5.48' y='148.67' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c6'>\n   <rect x='5.48' y='179.58' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c7'>\n   <rect x='138.14' y='117.75' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c8'>\n   <rect x='138.14' y='148.67' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c9'>\n   <rect x='138.14' y='179.58' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c10'>\n   <rect x='5.48' y='100.54' width='127.18' height='17.21'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c11'>\n   <rect x='138.14' y='100.54' width='127.18' height='17.21'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c12'>\n   <rect x='265.31' y='117.75' width='17.21' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c13'>\n   <rect x='265.31' y='148.67' width='17.21' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c14'>\n   <rect x='265.31' y='179.58' width='17.21' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c15'>\n   <rect x='288' y='77.26' width='288' height='159.66'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c16'>\n   <rect x='293.48' y='117.75' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c17'>\n   <rect x='293.48' y='148.67' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c18'>\n   <rect x='293.48' y='179.58' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c19'>\n   <rect x='426.14' y='117.75' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c20'>\n   <rect x='426.14' y='148.67' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c21'>\n   <rect x='426.14' y='179.58' width='127.18' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c22'>\n   <rect x='293.48' y='100.54' width='127.18' height='17.21'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c23'>\n   <rect x='426.14' y='100.54' width='127.18' height='17.21'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c24'>\n   <rect x='553.31' y='117.75' width='17.21' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c25'>\n   <rect x='553.31' y='148.67' width='17.21' height='25.44'/>\n  <\/clipPath>\n  <clipPath id='svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c26'>\n   <rect x='553.31' y='179.58' width='17.21' height='25.44'/>\n  <\/clipPath>\n <\/defs>\n <g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c1)'>\n   <rect x='0' y='0' width='576' height='288' fill='#FFFFFF' stroke='#FFFFFF' stroke-width='0.75' stroke-linejoin='round' stroke-linecap='round'/>\n   <rect x='156.52' y='-1.03' width='262.96' height='28.24' fill='#FFFFFF' stroke='none'/>\n   <text x='162' y='17.04' font-size='8.25pt' font-family='Helvetica'>Method<\/text>\n   <rect x='204.17' y='4.45' width='17.28' height='17.28' fill='#F2F2F2' stroke='none'/>\n   <circle cx='212.81' cy='13.09' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round'/>\n   <rect x='267.12' y='4.45' width='17.28' height='17.28' fill='#F2F2F2' stroke='none'/>\n   <circle cx='275.76' cy='13.09' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round'/>\n   <rect x='318.83' y='4.45' width='17.28' height='17.28' fill='#F2F2F2' stroke='none'/>\n   <circle cx='327.47' cy='13.09' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round'/>\n   <text x='226.93' y='16.24' font-size='6.6pt' font-family='Helvetica'>Wordfish<\/text>\n   <text x='289.88' y='16.24' font-size='6.6pt' font-family='Helvetica'>BERT<\/text>\n   <text x='341.59' y='16.24' font-size='6.6pt' font-family='Helvetica'>Manual annotation<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c3)'>\n   <rect x='0' y='77.26' width='288' height='159.66' fill='#FFFFFF' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c4)'>\n   <rect x='5.48' y='117.75' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='25.71,143.19 25.71,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='54.62,143.19 54.62,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='83.52,143.19 83.52,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='112.42,143.19 112.42,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='11.26,143.19 11.26,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='40.16,143.19 40.16,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='69.07,143.19 69.07,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='97.97,143.19 97.97,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='126.87,143.19 126.87,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='61.48,130.47 61.48,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='61.48,130.47 55.23,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='55.23,130.47 55.23,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='67.45,122.76 67.45,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='67.45,122.76 61.09,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='61.09,122.76 61.09,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='69.16' cy='138.18' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Filiz Polat (Grüne): 37 tweets' data-id='Filiz Polat (Grüne): 37 tweets'/>\n   <circle cx='58.36' cy='130.47' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Filiz Polat (Grüne): 37 tweets' data-id='Filiz Polat (Grüne): 37 tweets'/>\n   <circle cx='64.27' cy='122.76' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Filiz Polat (Grüne): 37 tweets' data-id='Filiz Polat (Grüne): 37 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c5)'>\n   <rect x='5.48' y='148.67' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='25.71,174.10 25.71,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='54.62,174.10 54.62,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='83.52,174.10 83.52,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='112.42,174.10 112.42,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='11.26,174.10 11.26,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='40.16,174.10 40.16,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='69.07,174.10 69.07,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='97.97,174.10 97.97,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='126.87,174.10 126.87,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='39.26,161.38 39.26,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='39.26,161.38 35.05,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='35.05,161.38 35.05,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='65.74,153.68 65.74,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='65.74,153.68 63.36,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='63.36,153.68 63.36,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='46.49' cy='169.09' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Eva Högl (SPD): 191 tweets' data-id='Eva Högl (SPD): 191 tweets'/>\n   <circle cx='37.07' cy='161.38' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Eva Högl (SPD): 191 tweets' data-id='Eva Högl (SPD): 191 tweets'/>\n   <circle cx='64.55' cy='153.68' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Eva Högl (SPD): 191 tweets' data-id='Eva Högl (SPD): 191 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c6)'>\n   <rect x='5.48' y='179.58' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='25.71,205.02 25.71,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='54.62,205.02 54.62,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='83.52,205.02 83.52,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='112.42,205.02 112.42,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='11.26,205.02 11.26,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='40.16,205.02 40.16,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='69.07,205.02 69.07,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='97.97,205.02 97.97,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='126.87,205.02 126.87,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.31,192.30 27.31,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='27.31,192.30 22.00,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='22.00,192.30 22.00,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='57.05,184.59 57.05,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='57.05,184.59 55.58,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='55.58,184.59 55.58,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='36.36' cy='200.01' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Christian Kühn (Grüne): 450 tweets' data-id='Christian Kühn (Grüne): 450 tweets'/>\n   <circle cx='24.14' cy='192.3' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Christian Kühn (Grüne): 450 tweets' data-id='Christian Kühn (Grüne): 450 tweets'/>\n   <circle cx='56.32' cy='184.59' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Christian Kühn (Grüne): 450 tweets' data-id='Christian Kühn (Grüne): 450 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c7)'>\n   <rect x='138.14' y='117.75' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='158.37,143.19 158.37,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='187.27,143.19 187.27,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='216.18,143.19 216.18,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='245.08,143.19 245.08,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='143.92,143.19 143.92,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='172.82,143.19 172.82,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='201.72,143.19 201.72,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='230.63,143.19 230.63,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='259.53,143.19 259.53,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='224.42,130.47 224.42,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='224.42,130.47 216.75,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='216.75,130.47 216.75,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='225.24,122.76 225.24,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='225.24,122.76 217.74,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='217.74,122.76 217.74,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='217.54' cy='138.18' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Carina Konrad (FDP): 28 tweets' data-id='Carina Konrad (FDP): 28 tweets'/>\n   <circle cx='220.6' cy='130.47' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Carina Konrad (FDP): 28 tweets' data-id='Carina Konrad (FDP): 28 tweets'/>\n   <circle cx='221.49' cy='122.76' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Carina Konrad (FDP): 28 tweets' data-id='Carina Konrad (FDP): 28 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c8)'>\n   <rect x='138.14' y='148.67' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='158.37,174.10 158.37,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='187.27,174.10 187.27,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='216.18,174.10 216.18,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='245.08,174.10 245.08,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='143.92,174.10 143.92,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='172.82,174.10 172.82,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='201.72,174.10 201.72,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='230.63,174.10 230.63,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='259.53,174.10 259.53,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='235.71,161.38 235.71,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='235.71,161.38 230.59,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='230.59,161.38 230.59,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='217.03,153.68 217.03,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='217.03,153.68 214.52,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='214.52,153.68 214.52,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='227' cy='169.09' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Hagen Reinhold (FDP): 240 tweets' data-id='Hagen Reinhold (FDP): 240 tweets'/>\n   <circle cx='233.34' cy='161.38' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Hagen Reinhold (FDP): 240 tweets' data-id='Hagen Reinhold (FDP): 240 tweets'/>\n   <circle cx='215.78' cy='153.68' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Hagen Reinhold (FDP): 240 tweets' data-id='Hagen Reinhold (FDP): 240 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c9)'>\n   <rect x='138.14' y='179.58' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='158.37,205.02 158.37,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='187.27,205.02 187.27,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='216.18,205.02 216.18,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='245.08,205.02 245.08,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='143.92,205.02 143.92,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='172.82,205.02 172.82,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='201.72,205.02 201.72,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='230.63,205.02 230.63,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='259.53,205.02 259.53,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='236.17,192.30 236.17,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='236.17,192.30 229.66,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='229.66,192.30 229.66,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='209.61,184.59 209.61,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='209.61,184.59 207.92,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='207.92,184.59 207.92,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='233.24' cy='200.01' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Jan-Marco Luczak (CDU/CSU): 498 tweets' data-id='Jan-Marco Luczak (CDU/CSU): 498 tweets'/>\n   <circle cx='232.83' cy='192.3' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Jan-Marco Luczak (CDU/CSU): 498 tweets' data-id='Jan-Marco Luczak (CDU/CSU): 498 tweets'/>\n   <circle cx='208.77' cy='184.59' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Jan-Marco Luczak (CDU/CSU): 498 tweets' data-id='Jan-Marco Luczak (CDU/CSU): 498 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c10)'>\n   <rect x='5.48' y='100.54' width='127.18' height='17.21' fill='#D9D9D9' stroke='none'/>\n   <text x='52.69' y='112.3' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>left-wing<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c11)'>\n   <rect x='138.14' y='100.54' width='127.18' height='17.21' fill='#D9D9D9' stroke='none'/>\n   <text x='182.65' y='112.3' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>right-wing<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c12)'>\n   <rect x='265.31' y='117.75' width='17.21' height='25.44' fill='#D9D9D9' stroke='none'/>\n   <text transform='translate(270.76,123.87) rotate(90.00)' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>low<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c13)'>\n   <rect x='265.31' y='148.67' width='17.21' height='25.44' fill='#D9D9D9' stroke='none'/>\n   <text transform='translate(270.76,145.73) rotate(90.00)' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>medium<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c14)'>\n   <rect x='265.31' y='179.58' width='17.21' height='25.44' fill='#D9D9D9' stroke='none'/>\n   <text transform='translate(270.76,183.98) rotate(90.00)' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>high<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c1)'>\n   <polyline points='11.26,207.76 11.26,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='40.16,207.76 40.16,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='69.07,207.76 69.07,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='97.97,207.76 97.97,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='126.87,207.76 126.87,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='7.35' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-4<\/text>\n   <text x='36.25' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-2<\/text>\n   <text x='66.62' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>0<\/text>\n   <text x='95.52' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>2<\/text>\n   <text x='124.43' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>4<\/text>\n   <polyline points='143.92,207.76 143.92,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='172.82,207.76 172.82,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='201.72,207.76 201.72,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='230.63,207.76 230.63,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='259.53,207.76 259.53,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='140' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-4<\/text>\n   <text x='168.91' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-2<\/text>\n   <text x='199.28' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>0<\/text>\n   <text x='228.18' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>2<\/text>\n   <text x='257.08' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>4<\/text>\n   <text x='115.83' y='229.02' font-size='8.25pt' font-family='Helvetica'>Position<\/text>\n   <text x='5.48' y='92.2' font-size='9.9pt' font-family='Helvetica'>Market Control<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c15)'>\n   <rect x='288' y='77.26' width='288' height='159.66' fill='#FFFFFF' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='round'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c16)'>\n   <rect x='293.48' y='117.75' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='313.71,143.19 313.71,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='342.62,143.19 342.62,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='371.52,143.19 371.52,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='400.42,143.19 400.42,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='299.26,143.19 299.26,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='328.16,143.19 328.16,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='357.07,143.19 357.07,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='385.97,143.19 385.97,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='414.87,143.19 414.87,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='346.02,130.47 346.02,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='346.02,130.47 335.64,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='335.64,130.47 335.64,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='370.24,122.76 370.24,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='370.24,122.76 357.20,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='357.20,122.76 357.20,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='345.73' cy='138.18' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Filiz Polat (Grüne): 14 tweets' data-id='Filiz Polat (Grüne): 14 tweets'/>\n   <circle cx='341.21' cy='130.47' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Filiz Polat (Grüne): 14 tweets' data-id='Filiz Polat (Grüne): 14 tweets'/>\n   <circle cx='363.72' cy='122.76' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Filiz Polat (Grüne): 14 tweets' data-id='Filiz Polat (Grüne): 14 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c17)'>\n   <rect x='293.48' y='148.67' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='313.71,174.10 313.71,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='342.62,174.10 342.62,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='371.52,174.10 371.52,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='400.42,174.10 400.42,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='299.26,174.10 299.26,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='328.16,174.10 328.16,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='357.07,174.10 357.07,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='385.97,174.10 385.97,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='414.87,174.10 414.87,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='368.00,161.38 368.00,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='368.00,161.38 355.01,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='355.01,161.38 355.01,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='343.93,153.68 343.93,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='343.93,153.68 336.61,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='336.61,153.68 336.61,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='358.38' cy='169.09' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Eva Högl (SPD): 26 tweets' data-id='Eva Högl (SPD): 26 tweets'/>\n   <circle cx='361.24' cy='161.38' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Eva Högl (SPD): 26 tweets' data-id='Eva Högl (SPD): 26 tweets'/>\n   <circle cx='340.27' cy='153.68' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Eva Högl (SPD): 26 tweets' data-id='Eva Högl (SPD): 26 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c18)'>\n   <rect x='293.48' y='179.58' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='313.71,205.02 313.71,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='342.62,205.02 342.62,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='371.52,205.02 371.52,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='400.42,205.02 400.42,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='299.26,205.02 299.26,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='328.16,205.02 328.16,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='357.07,205.02 357.07,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='385.97,205.02 385.97,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='414.87,205.02 414.87,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='333.36,192.30 333.36,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='333.36,192.30 319.85,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='319.85,192.30 319.85,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='369.06,184.59 369.06,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='369.06,184.59 365.72,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='365.72,184.59 365.72,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='337.45' cy='200.01' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Christian Kühn (Grüne): 179 tweets' data-id='Christian Kühn (Grüne): 179 tweets'/>\n   <circle cx='326.76' cy='192.3' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Christian Kühn (Grüne): 179 tweets' data-id='Christian Kühn (Grüne): 179 tweets'/>\n   <circle cx='367.39' cy='184.59' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Christian Kühn (Grüne): 179 tweets' data-id='Christian Kühn (Grüne): 179 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c19)'>\n   <rect x='426.14' y='117.75' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='446.37,143.19 446.37,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='475.27,143.19 475.27,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='504.18,143.19 504.18,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='533.08,143.19 533.08,117.75' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='431.92,143.19 431.92,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='460.82,143.19 460.82,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='489.72,143.19 489.72,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.63,143.19 518.63,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='547.53,143.19 547.53,117.75' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='510.33,130.47 510.33,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='510.33,130.47 497.27,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='497.27,130.47 497.27,130.47' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='500.43,122.76 500.43,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='500.43,122.76 492.80,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='492.80,122.76 492.80,122.76' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='489.75' cy='138.18' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Carina Konrad (FDP): 28 tweets' data-id='Carina Konrad (FDP): 28 tweets'/>\n   <circle cx='503.78' cy='130.47' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Carina Konrad (FDP): 28 tweets' data-id='Carina Konrad (FDP): 28 tweets'/>\n   <circle cx='496.62' cy='122.76' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Carina Konrad (FDP): 28 tweets' data-id='Carina Konrad (FDP): 28 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c20)'>\n   <rect x='426.14' y='148.67' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='446.37,174.10 446.37,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='475.27,174.10 475.27,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='504.18,174.10 504.18,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='533.08,174.10 533.08,148.67' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='431.92,174.10 431.92,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='460.82,174.10 460.82,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='489.72,174.10 489.72,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.63,174.10 518.63,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='547.53,174.10 547.53,148.67' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='529.51,161.38 529.51,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='529.51,161.38 522.06,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='522.06,161.38 522.06,161.38' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='487.56,153.68 487.56,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='487.56,153.68 484.39,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='484.39,153.68 484.39,153.68' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='517.4' cy='169.09' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Hagen Reinhold (FDP): 199 tweets' data-id='Hagen Reinhold (FDP): 199 tweets'/>\n   <circle cx='525.97' cy='161.38' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Hagen Reinhold (FDP): 199 tweets' data-id='Hagen Reinhold (FDP): 199 tweets'/>\n   <circle cx='485.97' cy='153.68' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Hagen Reinhold (FDP): 199 tweets' data-id='Hagen Reinhold (FDP): 199 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c21)'>\n   <rect x='426.14' y='179.58' width='127.18' height='25.44' fill='#F2F2F2' stroke='none'/>\n   <polyline points='446.37,205.02 446.37,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='475.27,205.02 475.27,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='504.18,205.02 504.18,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='533.08,205.02 533.08,179.58' fill='none' stroke='#FFFFFF' stroke-width='0.53' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='431.92,205.02 431.92,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='460.82,205.02 460.82,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='489.72,205.02 489.72,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.63,205.02 518.63,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='547.53,205.02 547.53,179.58' fill='none' stroke='#FFFFFF' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='545.77,192.30 545.77,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='545.77,192.30 539.61,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='539.61,192.30 539.61,192.30' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='483.28,184.59 483.28,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='483.28,184.59 480.56,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='480.56,184.59 480.56,184.59' fill='none' stroke='#000000' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <circle cx='539.95' cy='200.01' r='1.47pt' fill='#440154' stroke='#440154' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Jan-Marco Luczak (CDU/CSU): 229 tweets' data-id='Jan-Marco Luczak (CDU/CSU): 229 tweets'/>\n   <circle cx='542.71' cy='192.3' r='1.47pt' fill='#21908C' stroke='#21908C' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Jan-Marco Luczak (CDU/CSU): 229 tweets' data-id='Jan-Marco Luczak (CDU/CSU): 229 tweets'/>\n   <circle cx='481.92' cy='184.59' r='1.47pt' fill='#FDE725' stroke='#FDE725' stroke-width='0.71' stroke-linejoin='round' stroke-linecap='round' title='Jan-Marco Luczak (CDU/CSU): 229 tweets' data-id='Jan-Marco Luczak (CDU/CSU): 229 tweets'/>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c22)'>\n   <rect x='293.48' y='100.54' width='127.18' height='17.21' fill='#D9D9D9' stroke='none'/>\n   <text x='340.69' y='112.3' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>left-wing<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c23)'>\n   <rect x='426.14' y='100.54' width='127.18' height='17.21' fill='#D9D9D9' stroke='none'/>\n   <text x='470.65' y='112.3' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>right-wing<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c24)'>\n   <rect x='553.31' y='117.75' width='17.21' height='25.44' fill='#D9D9D9' stroke='none'/>\n   <text transform='translate(558.76,123.87) rotate(90.00)' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>low<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c25)'>\n   <rect x='553.31' y='148.67' width='17.21' height='25.44' fill='#D9D9D9' stroke='none'/>\n   <text transform='translate(558.76,145.73) rotate(90.00)' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>medium<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c26)'>\n   <rect x='553.31' y='179.58' width='17.21' height='25.44' fill='#D9D9D9' stroke='none'/>\n   <text transform='translate(558.76,183.98) rotate(90.00)' font-size='6.6pt' font-family='Helvetica' fill='#1A1A1A'>high<\/text>\n  <\/g>\n  <g clip-path='url(#svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f_c1)'>\n   <polyline points='299.26,207.76 299.26,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='328.16,207.76 328.16,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='357.07,207.76 357.07,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='385.97,207.76 385.97,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='414.87,207.76 414.87,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='295.35' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-4<\/text>\n   <text x='324.25' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-2<\/text>\n   <text x='354.62' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>0<\/text>\n   <text x='383.52' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>2<\/text>\n   <text x='412.43' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>4<\/text>\n   <polyline points='431.92,207.76 431.92,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='460.82,207.76 460.82,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='489.72,207.76 489.72,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='518.63,207.76 518.63,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <polyline points='547.53,207.76 547.53,205.02' fill='none' stroke='#333333' stroke-width='1.07' stroke-linejoin='round' stroke-linecap='butt'/>\n   <text x='428' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-4<\/text>\n   <text x='456.91' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>-2<\/text>\n   <text x='487.28' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>0<\/text>\n   <text x='516.18' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>2<\/text>\n   <text x='545.08' y='216.25' font-size='6.6pt' font-family='Helvetica' fill='#4D4D4D'>4<\/text>\n   <text x='403.83' y='229.02' font-size='8.25pt' font-family='Helvetica'>Position<\/text>\n   <text x='293.48' y='92.2' font-size='9.9pt' font-family='Helvetica'>Supply-side subsidies<\/text>\n  <\/g>\n <\/g>\n<\/svg>","js":null,"uid":"svg_dddfdffd-5887-4022-bf0c-847e7fdbe25f","ratio":2,"settings":{"tooltip":{"css":".tooltip_SVGID_ { padding:5px;background:black;color:white;border-radius:2px 2px 2px 2px;text-align:left; ; position:absolute;pointer-events:none;z-index:999;}","placement":"container","offx":10,"offy":0,"use_cursor_pos":true,"opacity":0.9,"usefill":false,"usestroke":false,"delay":{"over":200,"out":500}},"hover":{"css":".hover_SVGID_ { fill:orange;stroke:gray; }","reactive":false},"hoverkey":{"css":".hover_key_SVGID_ { stroke:red; }","reactive":false},"hovertheme":{"css":".hover_theme_SVGID_ { fill:green; }","reactive":false},"hoverinv":{"css":""},"zoom":{"min":1,"max":1},"capture":{"css":".selected_SVGID_ { fill:red;stroke:gray; }","type":"multiple","only_shiny":true,"selected":[]},"capturekey":{"css":".selected_key_SVGID_ { stroke:gray; }","type":"single","only_shiny":true,"selected":[]},"capturetheme":{"css":".selected_theme_SVGID_ { stroke:gray; }","type":"single","only_shiny":true,"selected":[]},"toolbar":{"position":"topright","saveaspng":true,"pngname":"diagram"},"sizing":{"rescale":true,"width":1}}},"evals":[],"jsHooks":[]}</script>
+
+* BERT beats Wordfish in 50% of the low-salience cases and clearly outperforms Wordfish in the medium and high-salience scenarios
+
+---
+
+class: inverse, mline, center, middle
+# Summary and outlook
+
+---
+
+# Summary and outlook
+
+## Summary
+
+* We presented a novel three-step framework using BERT and hierarchical models for legislator-level salience and position estimation based on political texts
+* For both salience and positions, our multi-dimensional framework outperforms traditional approaches in the use case of housing in Germany using tweets as political texts
+
+## Outlook
+
+* Implementing Wordscores .cyan[.font70[(Laver et al. 2003)]] to have an additional benchmarking approach
+* Additional application with different type of text and different issue structure
+
+---
+
+class: inverse, center, middle,title-slide
+
+# Thank you!
+
+## Your feedback is highly appreciated.
+
+### &lt;table class="authors"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+Andreas Küpfer
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+.font80[Technical University of Darmstadt]
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table class="contact"&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></svg> &lt;a href="mailto:andreas.kuepfer@tu-darmstadt.de"&gt;&lt;code&gt;andreas.kuepfer@tu-darmstadt.de&lt;/code&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg> &lt;a href="https://twitter.com/ankuepfer"&gt;&lt;code&gt;@ankuepfer&lt;/code&gt;&lt;/a&gt;
+&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="macros.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9",
+"slideNumberFormat": "<div class=\"progress-bar-container\">\n  <div class=\"progress-bar\" style=\"width: calc(%current% / %total% * 100%);\">\n  </div>\n</div>\n"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+<style>
+.logo {
+  background-image: url('TU_Darmstadt_Logo.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  width: 148px;
+  height: 100px;
+  z-index: 0;
+}
+</style>
+
+<script>
+document
+  .querySelectorAll(
+    '.remark-slide-content' +
+    '.title-slide'
+  )
+  .forEach(el => {
+    el.innerHTML += '<div class="logo"></div>';
+  });
+</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
