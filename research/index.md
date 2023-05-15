@@ -10,7 +10,7 @@ title: Research
 ###### 2023
 
 * Simulating Party Shares (with [Chris Hanretty](http://chrishanretty.co.uk/)). *Political Analysis*. [[article]](https://www.cambridge.org/core/journals/political-analysis/article/simulating-party-shares/C391F0D44529EE6E73F904F2D1E1050F) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3WILXI)
-* 
+
 ###### 2022
 
 * The GLES Open Science Challenge 2021 in Hindsight: Experiences Gained and Lessons Learned (with Hannah Bucher, Anne-Kathrin Stroppe, Axel M. Burger, Thorsten Faas, Harald Schoen, Marc Debus, Sigrid Roßteutscher, Robert A. Huber, Michael Jankowski, Melvin John, Jan Menzner, Christian H. Schimpf, Christian Schnaudt, Nils D. Steiner, Richard Traunmüller, Fabienne Unkelbach, Vera Vogel, Carsten Wegscheider, Robert Welz, and Alexander Wuttke). *German Political Science Quarterly*. [[article]]([https://link.springer.com/article/10.1007/s11615-022-00404-8](https://link.springer.com/article/10.1007/s11615-022-00437-z)) 
