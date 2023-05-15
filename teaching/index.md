@@ -15,6 +15,7 @@ title: Teaching
 
 #### Past Courses
 
+* <a href="https://github.com/denis-cohen/statmodeling">Advanced Bayesian Statistical Modeling in R and Stan</a>. Workshop, <a href="https://training.gesis.org/">GESIS Training Courses</a>. 11/2022. <a href="https://github.com/denis-cohen/statmodeling">[course materials]</a>
 * <a href="https://portal2.uni-mannheim.de:443/portal2/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=22745&periodId=256&navigationPosition=studiesOffered,searchCourses">Theory Building and Causal Inference</a>. Graduate seminar, <a href="https://www.uni-mannheim.de/gess/programs/cdss/">Center for Doctoral Studies in Social and Behavioral Sciences</a>, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2021 - 12/2021. <a href="syllabus_tbci21.pdf">[syllabus]</a>
 * <a href="https://portal2.uni-mannheim.de:443/portal2/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=22745&periodId=256&navigationPosition=studiesOffered,searchCourses">Lecture Multivariate Analyses</a>. Graduate seminar, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2020 - 12/2020. <a href="syllabus_qm2020.pdf">[syllabus]</a>
 * <a href="https://portal2.uni-mannheim.de/portal2/pages/cm/exa/coursemanagement/basicCourseData.xhtml?_flowId=searchCourseNonStaff-flow&_flowExecutionKey=e1s4">Tutorial Multivariate Analyses</a>. Graduate seminar, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2019 - 12/2019.
