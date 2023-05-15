@@ -34,7 +34,7 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 
 #### Software
 
-* [triviz](https://github.com/denis-cohen/triviz): Triangular Visualizations for the Significance of Pairwise Differences in Multigroup Comparisons(with [Andreas Küpfer](https://andreaskuepfer.github.io/))
+* [triviz](https://github.com/denis-cohen/triviz): Triangular Visualizations for the Significance of Pairwise Differences in Multigroup Comparisons (with [Andreas Küpfer](https://andreaskuepfer.github.io/))
 * [voteswitchR](https://github.com/denis-cohen/voteswitchR): Data and Methods for Analyzing Comparative Vote Switching Data
 * [regplane3D](https://github.com/denis-cohen/regplane3D): Plotting Regression Predictions in 3D
 * [flexbib](https://github.com/paulcbauer/flex_bib): Flexibly Generate Multiple Bibliographies in RMarkdown (with [Paul C. Bauer](https://sites.google.com/view/paulcbauer))
