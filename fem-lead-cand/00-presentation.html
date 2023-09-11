@@ -4,7 +4,7 @@
     <title>Electoral reactions to female lead candidates</title>
     <meta charset="utf-8" />
     <meta name="author" content="Werner Krause &amp; Denis Cohen" />
-    <meta name="date" content="2023-09-11" />
+    <meta name="date" content="2023-09-12" />
     <script src="00-presentation_files/header-attrs/header-attrs.js"></script>
     <link href="00-presentation_files/remark-css/default.css" rel="stylesheet" />
     <script src="00-presentation_files/htmlwidgets/htmlwidgets.js"></script>
@@ -70,7 +70,7 @@ class: inverse, center, middle, title-slide
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-Dreiländertagung DVPW-ÖGPW-SVPW, Linz, Austria &lt;br /&gt; September 11, 2023
+Dreil&auml;ndertagung DVPW-&Ouml;GPW-SVPW, Linz, Austria &lt;br /&gt; September 12, 2023
 
 ---
 
@@ -275,7 +275,7 @@ class: inverse, mline, center, middle
 --
 
 .font80[
-### RDD Analyses 
+### Event studies (Pre-Post & RD Designs) 
 
 1. .cyan[Merkel's nomination]: CDU/CSU vote intention, based on weekly public opinion polls from *Forsa*, `\(N \approx 2,500\)` each
 1. .cyan[Baerbock's nomination]: Public discourse
@@ -313,20 +313,24 @@ class: inverse, mline, center, middle
     - Based on gender-classified entries from the `firstname-database`
     - Classification: `\(\approx 10\%\)` women, `\(\approx 32\%\)` men, `\(\approx 58\%\)` unclassifiable
 
-### Analysis: Regression Discontinuity Design
+### Analyses: Pre-/Post and RD Designs
 
 - Cut-off at the time of Baerbock's nomination April 19, 2021, 11:00 AM CET
 - Comparison of those tweeting about Baerbock just before and just after this event
-- Analysis using first and zero-order polynomial specifications, robust bias-corrected SEs, and a triangular kernel function
-- Full sample (all accounts) as well as subsets for men, women, and unclassified accounts
-- Bandwidth determined via optimal bandwidth selection as implemented in `rdrobust`: 1.27-9.78
+- Pre-Post Design
+    - 14-day window around nomination date
+    - Varying window widths for sensitivity
+- RDD
+    - Analysis using first and zero-order polynomial specifications, robust bias-corrected SEs, and a triangular kernel function
+    - Full sample (all accounts) as well as subsets for men, women, and unclassified accounts
+    - Bandwidth determined via optimal bandwidth selection as implemented in `rdrobust`: 1.27-9.78
 ]
 ]
 ]
 
 ---
 
-# Electoral effects: RDD Results
+# Electoral effects: Event study results
 
 
 
@@ -345,13 +349,17 @@ class: inverse, mline, center, middle
     - Avg. sample size of `\(2,500\)`
     - Inforrmation on vote intention, respondent gender, and past vote choice
     
-### Analysis: Regression Discontinuity Design
+### Analysis: Event study designs
 
 - Cut-off on the day of Baerbock's nomination April 19, 2021, 11:00 AM CET
-- Comparison of those tweeting about Baerbock just before and just after this event
-- Analysis using first and zero-order polynomial specifications, robust bias-corrected SEs, and a triangular kernel function
-- Full sample (all respondents) as well as subsets by gender and gender `\(\times\)` past vote
-- Bandwidth determined via optimal bandwidth selection as implemented in `rdrobust`: 11.75 - 48.53
+- Comparison of those tweeting about Baerbock just before (up to April 18) and just after (from April 20) this event
+- Pre-Post Design
+    - 14-day window around nomination date
+    - Varying window widths for sensitivity
+- RDD
+  - Analysis using first and zero-order polynomial specifications, robust bias-corrected SEs, and a triangular kernel function
+  - Full sample (all respondents) as well as subsets by gender and gender `\(\times\)` past vote
+  - Bandwidth determined via optimal bandwidth selection as implemented in `rdrobust`: 11.75 - 48.53
 ]
 ]
 ]
