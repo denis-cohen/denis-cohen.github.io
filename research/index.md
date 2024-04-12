@@ -56,4 +56,4 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 * How Perception of Support Drives Vote Switching to Challenger Parties (with [Daniel Bischof](https://danbischof.com/))
 * Public Support for Gender Equality and the Nomination of Female Candidates: Evidence from the UK, 1992-2017 (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
 * Economic Risk, Anti-Immigration Preferences, and Voting for the Radical Right
-* Applied Causal Inference (with R). Textbook, under contract with Chapman & Hall/CRC, expected 2022 (with [Paul C. Bauer](https://sites.google.com/view/paulcbauer)).
+* Applied Causal Inference (with R). Textbook, under contract with Chapman & Hall/CRC (with [Paul C. Bauer](https://sites.google.com/view/paulcbauer)).
