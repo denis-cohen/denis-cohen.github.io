@@ -7,9 +7,11 @@ title: Research
 
 ##### Peer-Reviewed Journal Articles
 
-###### 2023
+###### 2024
 
-* Comparative vote switching: A new framework for studying dynamic multi-party competition (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)). *The Journal of Politics*. Forthcoming.
+* Comparative vote switching: A new framework for studying dynamic multi-party competition (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)). *The Journal of Politics*. [[article]](https://www.journals.uchicago.edu/doi/full/10.1086/726952?journalCode=jop)  [[preprint]](https://denis-cohen.github.io/vote-switching/cohen_krause_abou-chadi_comparative_vote_switching-jop.pdf) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/46UDEI)
+
+###### 2023
 
 * Simulating Party Shares (with [Chris Hanretty](http://chrishanretty.co.uk/)). *Political Analysis*. [[article]](https://www.cambridge.org/core/journals/political-analysis/article/simulating-party-shares/C391F0D44529EE6E73F904F2D1E1050F) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3WILXI)
 
