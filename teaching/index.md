@@ -52,7 +52,9 @@ title: Teaching
 ##### Workshops
 
 * <a href="https://github.com/denis-cohen/statmodeling">Introduction to Bayesian Statistics</a>. Workshop, <a href="https://training.gesis.org/">GESIS Training Courses</a>. 03/2025. <a href="https://github.com/denis-cohen/bayesintro">[course materials]</a>
+
 * <a href="https://github.com/denis-cohen/statmodeling">Introduction to Bayesian Statistics</a>. Workshop, <a href="https://training.gesis.org/">GESIS Training Courses</a>. 11/2023. <a href="https://github.com/denis-cohen/bayesintro">[course materials]</a>
+
 * <a href="https://github.com/denis-cohen/statmodeling">Advanced Bayesian Statistical Modeling in R and Stan</a>. Workshop, <a href="https://training.gesis.org/">GESIS Training Courses</a>. 11/2022. <a href="https://github.com/denis-cohen/statmodeling">[course materials]</a>
 
  
