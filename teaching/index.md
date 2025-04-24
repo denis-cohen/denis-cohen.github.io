@@ -28,8 +28,6 @@ title: Teaching
 
 * <a href="https://studium.uni-muenster.de/qisserver/rds?state=verpublish&status=init&vmfile=no&moduleCall=webInfo&publishConfFile=webInfo&publishSubDir=veranstaltung&publishid=423302">Kolloquium Vergleichende Politikwissenschaft</a>. Research colloquium for BA/MA theses, <a href="https://www.uni-muenster.de/IfPol/en/index.shtml">Institute for Political Science</a>, <a href="https://www.uni-muenster.de/en/">University of Münster</a>. 10/2024 - 02/2025.
 
-* <a href="https://portal2.uni-mannheim.de:443/portal2/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=22745&periodId=256&navigationPosition=studiesOffered,searchCourses">Theory Building and Causal Inference</a>. Graduate seminar, <a href="https://www.uni-mannheim.de/gess/programs/cdss/">Center for Doctoral Studies in Social and Behavioral Sciences</a>, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2021 - 12/2021. <a href="syllabus_tbci21.pdf">[syllabus]</a>
-
 * <a href="https://portal2.uni-mannheim.de/portal2/pages/cm/exa/coursemanagement/basicCourseData.xhtml?_flowId=searchCourseNonStaff-flow&_flowExecutionKey=e1s4">Tutorial Multivariate Analyses</a>. Graduate seminar, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2019 - 12/2019.
 
 * <a href="https://portal2.uni-mannheim.de/portal2/pages/cm/exa/coursecatalog/showCourseCatalog.xhtml?_flowId=showCourseCatalog-flow&_flowExecutionKey=e1s8">Socio-Structural Explanations of Political Behavior</a>. Undergraduate seminar, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 02/2019 - 08/2019. <a href="syllabus_ssepb19.pdf">[syllabus]</a>
@@ -46,7 +44,9 @@ title: Teaching
 
 * <a href="https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/43647565836?22">Angewandte Forschungsmethoden</a>. Graduate lecture, <a href="https://www.tu-chemnitz.de/phil/politik/institut/institut.php">Institute of Political Science</a>, <a href="https://www.tu-chemnitz.de/">Chemnitz University of Technology</a>. 04/2024 - 08/2024.  <a href="vorlesungsplan_angewandte_forschungsmethoden_1.pdf">[syllabus]</a>
 
-* <a href="https://portal2.uni-mannheim.de:443/portal2/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=22745&periodId=256&navigationPosition=studiesOffered,searchCourses">Lecture Multivariate Analyses</a>. Graduate seminar, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2020 - 12/2020. <a href="syllabus_qm2020.pdf">[syllabus]</a>
+* <a href="https://portal2.uni-mannheim.de:443/portal2/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=22745&periodId=256&navigationPosition=studiesOffered,searchCourses">Theory Building and Causal Inference</a>. Graduate lecture, <a href="https://www.uni-mannheim.de/gess/programs/cdss/">Center for Doctoral Studies in Social and Behavioral Sciences</a>, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2021 - 12/2021. <a href="syllabus_tbci21.pdf">[syllabus]</a>
+
+* <a href="https://portal2.uni-mannheim.de:443/portal2/pages/startFlow.xhtml?_flowId=detailView-flow&unitId=22745&periodId=256&navigationPosition=studiesOffered,searchCourses">Lecture Multivariate Analyses</a>. Graduate lecture, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. 09/2020 - 12/2020. <a href="syllabus_qm2020.pdf">[syllabus]</a>
 
 
 ##### Workshops
