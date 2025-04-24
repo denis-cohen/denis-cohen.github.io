@@ -10,6 +10,7 @@ title: Research
 ###### 2024
 
 * Rental market risk and radical right support (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Thomas Kurer](https://thomaskurer.net/)). *Comparative Political Studies*. [[article]](https://journals.sagepub.com/doi/10.1177/00104140241306963) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TYQNAE)
+  
 * Comparative vote switching: A new framework for studying dynamic multi-party competition (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)). *The Journal of Politics*. [[article]](https://www.journals.uchicago.edu/doi/full/10.1086/726952?journalCode=jop)  [[preprint]](https://denis-cohen.github.io/vote-switching/cohen_krause_abou-chadi_comparative_vote_switching-jop.pdf) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/46UDEI)
 
 ###### 2023
