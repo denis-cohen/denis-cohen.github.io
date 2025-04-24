@@ -9,6 +9,7 @@ title: Research
 
 ###### 2024
 
+* Rental market risk and radical right support (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Thomas Kurer](https://thomaskurer.net/)). *Comparative Political Studies*. [[article]](https://journals.sagepub.com/doi/10.1177/00104140241306963) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TYQNAE)
 * Comparative vote switching: A new framework for studying dynamic multi-party competition (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)). *The Journal of Politics*. [[article]](https://www.journals.uchicago.edu/doi/full/10.1086/726952?journalCode=jop)  [[preprint]](https://denis-cohen.github.io/vote-switching/cohen_krause_abou-chadi_comparative_vote_switching-jop.pdf) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/46UDEI)
 
 ###### 2023
@@ -32,9 +33,9 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 
 ##### Chapters in Edited Volumes
 
-###### 2023
+###### 2024
 
-* Wohnungsmärkte, politische Einstellungen und Wahlverhalten bei der Bundestagswahl 2021 (Housing Markets, Political Attitudes, and Voting Behavior in the 2021 German Federal Election; with [Anne-Kathrin Stroppe](https://www.gesis.org/institut/mitarbeitendenverzeichnis/person/Anne-Kathrin.Stroppe) and [Stefan Jünger](https://stefanjuenger.github.io/)). *Wahlen und Wähler. Analysen aus Anlass der Bundestagswahl 2021*. Forthcoming.
+* Wohnungsmärkte, politische Einstellungen und Wahlverhalten bei der Bundestagswahl 2021 (Housing Markets, Political Attitudes, and Voting Behavior in the 2021 German Federal Election; with [Anne-Kathrin Stroppe](https://www.gesis.org/institut/mitarbeitendenverzeichnis/person/Anne-Kathrin.Stroppe) and [Stefan Jünger](https://stefanjuenger.github.io/)). *Wahlen und Wähler. Analysen aus Anlass der Bundestagswahl 2021*. [[chapter]](https://link.springer.com/chapter/10.1007/978-3-658-42694-1_18) [[replication materials]](https://static-content.springer.com/esm/chp%3A10.1007%2F978-3-658-42694-1_18/MediaObjects/606914_1_De_18_MOESM1_ESM.zip)
 
 
 ###### 2021
@@ -51,11 +52,10 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 
 #### Working Papers and Ongoing Work
 
-* Rental market risk and voting for the radical right (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Thomas Kurer](https://thomaskurer.net/))
 * Triangular visualizations: Making sense of statistical significance in multi-group comparisons
-* The Housing Crisis on Social Media: Housing Markets and the Subnational Diversification of Policy Supply (with [Tim Allinger](https://twitter.com/tim_allinger?lang=en) and [Andreas Küpfer](https://andreaskuepfer.github.io/))
-* Regional Labor Markets and the Politics of Resentment (with [Sergi Pardos-Prado](https://sergipardos.wixsite.com/sergipardos))
+* The Housing Crisis on Social Media: Housing Markets and the Subnational Diversification of Policy Supply (with [Tim Allinger](https://tim-allinger.github.io/) and [Andreas Küpfer](https://andreaskuepfer.github.io/))
+* Regional Labor Markets, Residential Mobility, and Anti-Immigration Sentiment (with [Sergi Pardos-Prado](https://www.sergipardos.com/))
 * How Perception of Support Drives Vote Switching to Challenger Parties (with [Daniel Bischof](https://danbischof.com/))
 * Public Support for Gender Equality and the Nomination of Female Candidates: Evidence from the UK, 1992-2017 (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
 * Economic Risk, Anti-Immigration Preferences, and Voting for the Radical Right
-* Applied Causal Inference (with R). Textbook, under contract with Chapman & Hall/CRC (with [Paul C. Bauer](https://sites.google.com/view/paulcbauer)).
+* Applied Causal Inference (with R). Textbook, under contract with Chapman & Hall/CRC (with [Paul C. Bauer](https://sites.google.com/view/paulcbauer) and [Lion Behrens](https://de.linkedin.com/in/lion-be)).
