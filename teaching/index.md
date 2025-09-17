@@ -12,9 +12,6 @@ title: Teaching
         }
 </style>
 
-#### Upcoming
-
-* <a href="https://github.com/denis-cohen/statmodeling">Advanced Bayesian Statistical Modeling in R and Stan</a>. Workshop, <a href="https://training.gesis.org/">GESIS Training Courses</a>. 05/2025. <a href="https://github.com/denis-cohen/statmodeling">[course materials]</a>
 
 #### Past Teaching
 
