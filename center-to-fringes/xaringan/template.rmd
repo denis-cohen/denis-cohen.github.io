@@ -24,6 +24,10 @@ output:
         </div>
     seal: false
     class: inverse, mline, center, middle
+knitr:
+  opts_knit:
+    base.dir: "."
+    base.url: ""
 ---
 
 class: inverse, center, middle, title-slide
@@ -31,6 +35,12 @@ class: inverse, center, middle, title-slide
 <!-- Setup chunks -->
 ```{r global-options, echo=FALSE, warning=FALSE, message=FALSE, results='hide', cache=FALSE}
 ## Global chunk options
+knitr::opts_chunk$set(fig.path = paste0(
+  "presentation-",
+  sprintf("%02d", params$version),
+  "_files/figure-html/"
+))
+
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
                       message = FALSE,
