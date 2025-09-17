@@ -1,0 +1,243 @@
+---
+title: "`r params$title`"
+subtitle: "`r params$subtitle`"
+author: "Denis Cohen, Daniel Auer & Sandra Morgenstern"
+date: "`r format(Sys.Date(), '%d %B %Y')`"
+output: 
+  xaringan::moon_reader:
+    includes:
+      after_body: "insert-logo.html"
+    css:
+      - default
+      - xaringan/mtheme.css
+      - xaringan/fonts_mtheme.css
+    md_extensions: +smart
+    nature: 
+      beforeInit: "xaringan/macros.js"
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9'
+      slideNumberFormat: |
+        <div class="progress-bar-container">
+          <div class="progress-bar" style="width: calc(%current% / %total% * 100%);">
+          </div>
+        </div>
+    seal: false
+    class: inverse, mline, center, middle
+---
+
+class: inverse, center, middle, title-slide
+
+<!-- Setup chunks -->
+```{r global-options, echo=FALSE, warning=FALSE, message=FALSE, results='hide', cache=FALSE}
+## Packages
+source("../../../pkg/pkgs.R")
+
+## Global chunk options
+knitr::opts_chunk$set(echo = FALSE,
+                      warning = FALSE,
+                      message = FALSE,
+                      cache = params$cache,
+                      cache.lazy = FALSE,
+                      fig.align = "center")
+options(scipen = 999)
+options(htmltools.preserve.raw = FALSE)
+options(knitr.duplicate.label = "allow")
+
+## Functions
+pretty_hux <- function (tab) {
+  tab %>%
+    as_huxtable() %>%
+    set_all_padding(4) %>%
+    set_outer_padding(0) %>%
+    set_bold(1, everywhere) %>%
+    set_bottom_border(1, everywhere) %>%
+    set_bottom_border(nrow(.), everywhere) %>%
+    set_align(col = 2:ncol(.), value = "right")
+}
+
+## Make references
+split_string <- function(input_string) {
+  strsplit(input_string, " \\| ")[[1]]
+}
+
+split_string_format <- function(input_string) {
+  match <- regmatches(input_string, regexec("^(.+?) \\((.+?)\\)$", input_string))[[1]]
+  
+  if (length(match) > 0) {
+    return(c(match[2], match[3]))
+  } else {
+    return(input_string)
+  }
+}
+
+format_ref <- function(ref, output) {
+  if (length(ref) == 1) {
+    if (output == "md") {
+      paste0("@", ref)
+    } else {
+      paste0("\\", output, "{", ref, "}")
+    }
+  } else if (length(ref) == 2) {
+    if (output == "md") {
+      paste0("@", ref[1], ", ", ref[2])
+    } else {
+      paste0("\\", output, "[", ref[2] ,"]{", ref[1], "}")
+    }
+  }
+}
+
+make_ref <- function(refs,
+                     output = c("md",
+                                "cite",
+                                "citep",
+                                "citalp",
+                                "fullcite"),
+                     replace_na = "",
+                     collapse = NULL,
+                     unlist_refs = TRUE) {
+  refs_out <- rep("", length(refs)) %>%
+    as.list()
+  for (i in seq_along(refs)) {
+    if (!is.na(refs[i])) {
+      refs_out[[i]] <- refs[i] %>%
+        split_string() %>%
+        lapply(., function(x)
+          split_string_format(x)) %>%
+        sapply(., function(x)
+          format_ref(x, output))
+      
+      if (!is.null(collapse))
+        refs_out[[i]] <- refs_out[[i]] %>%
+          paste(., collapse = collapse)
+    }
+  }
+  
+  if (unlist_refs) {
+    refs_out <- unlist(refs_out)
+  }
+  
+  return(refs_out)
+}
+
+# Source functions and packages ----
+source("../../../pkg/pkgs.R")
+funs <- list.files("../../../fun")
+sapply(funs, function (file)
+  source(paste0("../../../fun/", file)))
+```
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-tile-view, echo=FALSE}
+xaringanExtra::use_tile_view()
+```
+
+```{r xaringan-clipboard, echo=FALSE}
+xaringanExtra::use_clipboard()
+```
+
+```{r xaringan-editable, echo=FALSE}
+xaringanExtra::use_editable(expires = 1)
+```
+
+```{r xaringan-extra, echo=FALSE}
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+xaringanExtra::html_dependency_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = TRUE
+)
+```
+
+# `r params$title`
+
+## `r params$subtitle`
+
+### <table class="authors">
+<tbody>
+<tr>
+<td>Denis Cohen</td>
+<td>Daniel Auer</td>
+<td>Sandra N. Morgenstern</td>
+</tr>
+<tr>
+<td>.font80[University of Mannheim]</td>
+<td>.font80[Collegio Carlo Alberto]</td>
+<td>.font80[University of Mannheim]</td>
+</tr>
+</tbody>
+</table>
+<table class="contact">
+<tbody>
+<tr>
+<td>`r fontawesome::fa("envelope")` <code>denis.cohen@uni-mannheim.de</code></td>
+<td>`r fontawesome::fa("envelope")` <code>daniel.auer@carloalberto.org</code></td>
+<td>`r fontawesome::fa("envelope")` <code>morgenstern@uni-mannheim.de</code></td>
+</tr>
+<tr>
+<td>`r fontawesome::fa("bluesky")` <code>@denis-cohen@bsky.social</code></td>
+<td>`r fontawesome::fa("bluesky")` <code>@danielauer@bsky.social</code></td>
+<td>`r fontawesome::fa("bluesky")` <code>@snmorgenstern@bsky.social</code></td>
+</tr>
+<tr>
+<td>`r fontawesome::fa("globe")` <code>denis-cohen.github.io</code></td>
+<td>`r fontawesome::fa("globe")` <code>daniel-auer.com</code></td>
+<td>`r fontawesome::fa("globe")` <code>sandramorgenstern.com</code></td>
+</tr>
+</tbody>
+</table>
+
+`r params$occasion`<br /> `r params$place` <br /> `r params$date`
+
+---
+
+```{r contents, child = params$content}
+```
+
+---
+
+class: inverse, center, middle,title-slide
+
+# Thank you!
+
+## Your feedback is highly appreciated.
+
+### <table class="authors">
+<tbody>
+<tr>
+<td>Denis Cohen</td>
+<td>Daniel Auer</td>
+<td>Sandra N. Morgenstern</td>
+</tr>
+<tr>
+<td>.font80[University of Mannheim]</td>
+<td>.font80[Collegio Carlo Alberto]</td>
+<td>.font80[University of Mannheim]</td>
+</tr>
+</tbody>
+</table>
+<table class="contact">
+<tbody>
+<tr>
+<td>`r fontawesome::fa("envelope")` <code>denis.cohen@uni-mannheim.de</code></td>
+<td>`r fontawesome::fa("envelope")` <code>daniel.auer@carloalberto.org</code></td>
+<td>`r fontawesome::fa("envelope")` <code>morgenstern@uni-mannheim.de</code></td>
+</tr>
+<tr>
+<td>`r fontawesome::fa("bluesky")` <code>@denis-cohen@bsky.social</code></td>
+<td>`r fontawesome::fa("bluesky")` <code>@danielauer@bsky.social</code></td>
+<td>`r fontawesome::fa("bluesky")` <code>@snmorgenstern@bsky.social</code></td>
+</tr>
+<tr>
+<td>`r fontawesome::fa("globe")` <code>denis-cohen.github.io</code></td>
+<td>`r fontawesome::fa("globe")` <code>daniel-auer.com</code></td>
+<td>`r fontawesome::fa("globe")` <code>sandramorgenstern.com</code></td>
+</tr>
+</tbody>
+</table>

@@ -7,6 +7,10 @@ title: Research
 
 ##### Peer-Reviewed Journal Articles
 
+###### 2025
+
+* Regional Labor Markets, Residential Mobility, and Anti-Immigration Sentiment (with [Sergi Pardos-Prado](https://www.sergipardos.com/)). Conditionally accepted at *British Journal of Political Science*.
+
 ###### 2024
 
 * Rental market risk and radical right support (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Thomas Kurer](https://thomaskurer.net/)). *Comparative Political Studies*. [[article]](https://journals.sagepub.com/doi/10.1177/00104140241306963) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TYQNAE)
@@ -53,9 +57,10 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 
 #### Working Papers and Ongoing Work
 
+* From the center to the fringes: motivational drivers of mainstream-to-challenger defection and their socio-structural foundations (with Werner Krause and Anna E. Aigner)
+* Fight, flight, adaptation, demise? How residents react to shifts in local political opinion (with Daniel Auer and Sandra Morgenstern)
 * Triangular visualizations: Making sense of statistical significance in multi-group comparisons
 * The Housing Crisis on Social Media: Housing Markets and the Subnational Diversification of Policy Supply (with [Tim Allinger](https://tim-allinger.github.io/) and [Andreas Küpfer](https://andreaskuepfer.github.io/))
-* Regional Labor Markets, Residential Mobility, and Anti-Immigration Sentiment (with [Sergi Pardos-Prado](https://www.sergipardos.com/))
 * How Perception of Support Drives Vote Switching to Challenger Parties (with [Daniel Bischof](https://danbischof.com/))
 * Public Support for Gender Equality and the Nomination of Female Candidates: Evidence from the UK, 1992-2017 (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
 * Economic Risk, Anti-Immigration Preferences, and Voting for the Radical Right
