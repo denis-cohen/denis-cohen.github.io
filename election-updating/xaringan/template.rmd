@@ -25,6 +25,10 @@ output:
         </div>
     seal: false
     class: inverse, mline, center, middle
+knitr:
+  opts_knit:
+    base.dir: "."
+    base.url: ""
 ---
 
 class: inverse, center, middle, title-slide
@@ -35,6 +39,13 @@ class: inverse, center, middle, title-slide
 source("../../../pkg/pkgs.R")
 
 ## Global chunk options
+fig_path <- paste0(
+  "presentation-",
+  sprintf("%02d", params$version),
+  "_files/figure-html/"
+)
+knitr::opts_chunk$set(fig.path = fig_path)
+
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
                       message = FALSE,
@@ -198,6 +209,10 @@ xaringanExtra::html_dependency_extra_styles(
 ---
 
 ```{r contents, child = params$content}
+```
+
+```{r copy-figures, cache=FALSE}
+fs::dir_copy(fig_path, paste0("../", fig_path), overwrite = TRUE)
 ```
 
 ---
