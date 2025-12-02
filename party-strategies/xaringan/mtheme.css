@@ -1,0 +1,336 @@
+:root {
+  --col0: #FFFFFF;
+  --col1: #007696;
+  --col2: #d1a354;
+  --col1-light: #D1E6EC;
+  --col2-light: #d9d4cd;
+}
+
+.remark-slide-content {
+  background-color: var(--col0);
+  border-top: 80px solid var(--col0);
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1em 2em 1em 2em
+}
+
+.title-slide .inverse .remark-slide-content {
+  background-color: var(--col0);
+}
+
+.inverse {
+  background-color: var(--col0);
+  text-shadow: none;
+}
+
+/* Removes colored bar from top of the slide resulting in a clear slide */
+.clear{
+  border-top: 0px solid var(--col0);
+}
+
+.clear .inverse {
+  border-top: 0px solid var(--col0);
+}
+
+.clear .remark-slide-number {
+  display: none;
+}
+
+.clear .inverse .remark-slide-number {
+  display: none;
+}
+
+.remark-slide-number {
+  position: absolute;
+  bottom: 601px;
+  left: 0;
+  right: 0;
+}
+
+.mline .remark-slide-number { 
+  position: absolute;
+  bottom: 325.5px;
+  left: 48px;
+  right: 48px;
+}
+
+.remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 20;
+  height: 2px;
+  display: block;
+  left: 0;
+  right: 0;
+}
+
+.mline .remark-slide-number .progress-bar-container {
+  position: absolute;
+  bottom: 20;
+  height: 2px;
+  display: block;
+  left: 15px;
+  right: 15px;
+}
+
+.remark-slide-number .progress-bar {
+  height: 100%;
+  background-color: var(--col2);
+}
+
+h1 {
+  font-weight: normal;
+  margin-top: -95px;
+  margin-left: -00px;
+  color: var(--col1);
+}
+
+h2, h3, h4 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: var(--col1);
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 00px;
+  margin-bottom: -10px;
+}
+
+.remark-slide-content h1 {
+  font-size: 45px;
+}
+
+.remark-slide-content h2 {
+  font-size: 35px;
+}
+
+.remark-slide-content h3 {
+  font-size: 30px;
+}
+
+.remark-code-highlighted {
+  background-color: var(--col2-light);
+}
+
+.remark-code-line-highlighted {
+  background-color: var(--col2-light);
+}
+
+.left-column h2, .left-column h3, .left-column h4 {
+  color: var(--col1);
+}
+
+.left-column h2:last-of-type, .left-column h3:last-child {
+  color: var(--col1);
+}
+
+.title-slide {
+  background-color: var(--col0);
+}
+
+.title-slide h1 {
+  color: var(--col1);
+  font-size: 40px;
+  text-shadow: none;
+  font-weight: 400;
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 80px;
+}
+.title-slide h2 {
+  margin-top: -25px;
+  padding-bottom: -20px;
+  color: var(--col1);
+  text-shadow: none;
+  font-weight: 300;
+  font-size: 24px;
+  text-align: left;
+  margin-left: 15px;
+}
+.title-slide h3 {
+  color: black;
+  text-shadow: none;
+  font-size: 24px;
+  text-align: left;
+  margin-left: 15px;
+  margin-bottom: -30px;
+}
+
+.inverse h1, .inverse h2, .inverse h3 {
+  color: var(--col1);
+}
+
+hr, h1::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: var(--col2-light);
+  color: var(--col2-light);
+  height: 2px;
+  margin-left: -48px;
+  margin-right: -48px;
+  margin-top: 3.5px;
+}
+
+hr, .mline h1::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: var(--col2-light);
+  color: var(--col2-light);
+  height: 2px;
+}
+
+.mline h1::after {
+  margin: 10px 15px 0 15px;
+}
+
+
+hr, .title-slide h1::after {
+  display:none;
+}
+
+hr, .title-slide h2::after {
+  content: '';
+  display: block;
+  border: none;
+  background-color: var(--col2);
+  color: var(--col2);
+  height: 2px;
+}
+
+.title-slide h2::after {
+  margin: 36px 15px 48px 0;
+}
+
+.remark-slide-number {
+  font-size: 13pt;
+  color: var(--col2-light);
+  opacity: 1;
+}
+.inverse .remark-slide-number {
+  font-size: 13pt;
+  color: var(--col2-light);
+  opacity: 1;
+}
+
+/* turns off slide numbers for title page: https://github.com/gnab/remark/issues/298 */
+.title-slide .remark-slide-number {
+  display: none;
+}
+
+.remark-inline-code {
+  /* background: #F5F5F5; /* lighter */
+  /* background: #e7e8e2; /* darker */
+  color: var(--col1);
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.title-slide h3:nth-of-type(1) {
+  font-size: 24px;
+  font-weight: 300;
+  color: #000000;
+}
+
+.title-slide h3:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: 300;
+  color: #000000;
+  margin-left: 15px;
+  margin-top: 45px;
+}
+
+.title-slide .remark-inline-code {
+  color: #000000;
+  font-weight: 300;
+}
+
+.mjx-chtml {
+  color: var(--col2);
+}
+
+table, tbody, tr, th, td{
+  background-color: rgba(0, 0, 0, 0.0) !important;
+  border-collapse: collapse;
+  padding: 1 2 1 2;
+}
+
+table.authors {
+  border: none;
+  width: 100%;
+  text-align: left;
+  table-layout: fixed;
+  margin-bottom: 18px;
+}
+
+table.authors td, table.authors th {
+  border: none;
+  line-height: 100%;
+}
+
+table.authors tr:not(:last-child) td {
+    padding-top: 0em;
+}
+
+table.contact {
+  border: none;
+  width: 100%;
+  text-align: left;
+  table-layout: fixed;
+  margin-bottom: 48px;
+}
+
+table.contact td, table.contact th {
+  border: none;
+  padding-left: 18px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  font-size: 75%;
+  line-height: 100%;
+}
+
+a, a > code {
+ color: var(--col1);
+ text-decoration: none;
+}
+
+.emph1 {
+  color: var(--col1);
+}
+
+.emph2 {
+  color: var(--col2);
+}
+
+blockquote {
+  border-left: solid 5px var(--col1-light);
+  padding-left: 1em;
+  font-size: 75%;
+}
+
+.vcenter {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  -ms-transform: translate(-5%, -40%);
+  transform: translate(-5%, -40%);
+}
+
+div {
+  display: flex;
+}
+
+hr {
+  flex-grow: 1;
+  margin-left: 0px;
+  border: 0;
+}
+
+.remark-slide-content p {
+  column-count: auto !important;
+  columns: auto !important;
+  display: block !important;
+  width: auto !important;
+}
