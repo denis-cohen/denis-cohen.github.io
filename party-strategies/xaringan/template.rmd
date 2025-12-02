@@ -41,6 +41,7 @@ fig_path <- paste0(
   sprintf("%02d", params$version),
   "_files/figure-html/"
 )
+knitr::opts_chunk$set(fig.path = fig_path)
 
 knitr::opts_chunk$set(echo = FALSE,
                       warning = FALSE,
