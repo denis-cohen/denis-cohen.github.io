@@ -1,9 +1,9 @@
 :root {
   --col0: #FFFFFF;
-  --col1: #007696;
-  --col2: #d1a354;
-  --col1-light: #D1E6EC;
-  --col2-light: #d9d4cd;
+  --col1: #003056;
+  --col2: #D6C282;
+  --col1-light: #D9E0E6;
+  --col2-light: #fbf9f2;
 }
 
 .remark-slide-content {
