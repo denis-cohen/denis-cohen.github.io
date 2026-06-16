@@ -366,3 +366,18 @@ table.contact th {
   font-weight: 300 !important;
   color: black !important;  /* optional but keeps correct color */
 }
+
+.cols-50 {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  column-gap: 1em;
+  width: 100% !important;
+  max-width: none !important;
+  box-sizing: border-box;
+}
+
+.cols-50 > * {
+  min-width: 0;
+  max-width: none !important;
+  box-sizing: border-box;
+}

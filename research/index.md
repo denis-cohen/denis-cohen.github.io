@@ -9,19 +9,19 @@ title: Research
 
 ###### 2025
 
-* Regional Labor Markets, Residential Mobility, and Anti-Immigration Sentiment (with [Sergi Pardos-Prado](https://www.sergipardos.com/)). Conditionally accepted at *British Journal of Political Science*.
+* Regional Labor Markets, Residential Mobility, and Anti-Immigration Sentiment (with [Sergi Pardos-Prado](https://www.sergipardos.com/)). *British Journal of Political Science*.  [[article]](https://www.cambridge.org/core/journals/british-journal-of-political-science/article/regional-labor-markets-residential-mobility-and-antiimmigration-sentiment/D1EB2AC6A4E0236204A844426666135B) [[replication materials]](https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/VMFSOZ)
+
+* Rental market risk and radical right support (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Thomas Kurer](https://thomaskurer.net/)). *Comparative Political Studies*. [[article]](https://journals.sagepub.com/doi/10.1177/00104140241306963) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TYQNAE)
 
 ###### 2024
 
-* Rental market risk and radical right support (with [Tarik Abou-Chadi](https://www.tarikabouchadi.net/) and [Thomas Kurer](https://thomaskurer.net/)). *Comparative Political Studies*. [[article]](https://journals.sagepub.com/doi/10.1177/00104140241306963) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/TYQNAE)
-  
-* Comparative vote switching: A new framework for studying dynamic multi-party competition (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)). *The Journal of Politics*. [[article]](https://www.journals.uchicago.edu/doi/full/10.1086/726952?journalCode=jop)  [[preprint]](https://denis-cohen.github.io/vote-switching/cohen_krause_abou-chadi_comparative_vote_switching-jop.pdf) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/46UDEI)
+* Comparative vote switching: A new framework for studying dynamic multi-party competition (with [Werner Krause](https://krausewe.github.io/) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)). *The Journal of Politics*. [[article]](https://www.journals.uchicago.edu/doi/full/10.1086/726952?journalCode=jop)  [[preprint]](https://denis-cohen.github.io/vote-switching/cohen_krause_abou-chadi_comparative_vote_switching-jop.pdf) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/46UDEI)
 
 ###### 2023
 
 * Simulating Party Shares (with [Chris Hanretty](http://chrishanretty.co.uk/)). *Political Analysis*. [[article]](https://www.cambridge.org/core/journals/political-analysis/article/simulating-party-shares/C391F0D44529EE6E73F904F2D1E1050F) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/3WILXI)
 
-* Does Accommodation Work? Mainstream Party Strategies and the Success of Radical Right Parties (with [Werner Krause](https://www.wzb.eu/en/persons/werner-krause) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)) [[article]](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/does-accommodation-work-mainstream-party-strategies-and-the-success-of-radical-right-parties/5C3476FCD26B188C7399ADD920D71770) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GBWB8I)
+* Does Accommodation Work? Mainstream Party Strategies and the Success of Radical Right Parties (with [Werner Krause](https://krausewe.github.io/) and [Tarik Abou-Chadi](https://www.tarikabouchadi.net/)) [[article]](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/does-accommodation-work-mainstream-party-strategies-and-the-success-of-radical-right-parties/5C3476FCD26B188C7399ADD920D71770) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/GBWB8I)
 
 ###### 2022
 
@@ -37,6 +37,10 @@ title: Research
 Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political Science Research and Methods*. [[article]](https://www.cambridge.org/core/journals/political-science-research-and-methods/article/between-strategy-and-protest-how-policy-demand-political-dissatisfaction-and-strategic-incentives-matter-for-farright-voting/41E82D615A1BF10D1E85724E7142C2BA) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/V5AOXD)
 
 ##### Chapters in Edited Volumes
+
+###### Forthcoming
+
+* Beneath the Great Shift: Short-Term Vote Switching in Germany, 2021–2025. *How Germany Voted 2025* (with [Werner Krause](https://krausewe.github.io/))
 
 ###### 2024
 
@@ -57,11 +61,9 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 
 #### Working Papers and Ongoing Work
 
+* Party strategies and vote switching in multi-party systems
 * From the center to the fringes: motivational drivers of mainstream-to-challenger defection and their socio-structural foundations (with Werner Krause and Anna E. Aigner)
 * Fight, flight, adaptation, demise? How residents react to shifts in local political opinion (with Daniel Auer and Sandra Morgenstern)
 * Triangular visualizations: Making sense of statistical significance in multi-group comparisons
-* The Housing Crisis on Social Media: Housing Markets and the Subnational Diversification of Policy Supply (with [Tim Allinger](https://tim-allinger.github.io/) and [Andreas Küpfer](https://andreaskuepfer.github.io/))
+* Bounded Responsiveness: Housing Markets and the Subnational Diversification of Policy Supply (with [Tim Allinger](https://tim-allinger.github.io/) and [Andreas Küpfer](https://andreaskuepfer.github.io/))
 * How Perception of Support Drives Vote Switching to Challenger Parties (with [Daniel Bischof](https://danbischof.com/))
-* Public Support for Gender Equality and the Nomination of Female Candidates: Evidence from the UK, 1992-2017 (with [Jochen Rehmert](https://sites.google.com/view/jochenrehmert))
-* Economic Risk, Anti-Immigration Preferences, and Voting for the Radical Right
-* Applied Causal Inference (with R). Textbook, under contract with Chapman & Hall/CRC (with [Paul C. Bauer](https://sites.google.com/view/paulcbauer) and [Lion Behrens](https://de.linkedin.com/in/lion-be)).
