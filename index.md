@@ -8,7 +8,9 @@ layout: home
     <span style="display:block;color:gray;text-align:center;font-size:0.5em">Credits: University of Mannheim – Sarah Hähnle</span>
   </span>
   I am a Senior Research Fellow in the <a href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. I am also the lead organizer of the <a href="https://socialsciencedatalab.mzes.uni-mannheim.de/page/events/">MZES Social Science Data Lab</a> as well as co-founder and co-editor of the blog <a href="https://socialsciencedatalab.mzes.uni-mannheim.de/">Methods Bites</a>, where I regularly contribute <a href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/author/denis-cohen/">tutorials</a> on research methods and social data science. From October 2024 to February 2025, I served as Interim Professor at the <a href="https://www.uni-muenster.de/IfPol/en/personen/bischof.html">Chair of Comparative Politics</a> at the University of Münster.
-  <br /><br />
+</p>
+
+<p>
   I study context-dependent explanations of political preferences and voting behavior, the drivers and outcomes of party competition in multiparty democracies, and the causes and effects of strategic elite behavior. My ongoing work embeds these perspectives in analyses of the political consequences of geo-spatial inequalities. Methodologically, I focus on advanced statistical modeling, georeferenced data, data visualization, and causal inference. My work has been published in <em>The Journal of Politics</em>, <em>Political Analysis</em>, <em>Comparative Political Studies</em>, and <em>Political Science Research and Methods</em>, among others.
 </p>
 
