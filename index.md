@@ -5,7 +5,7 @@ layout: home
 <p style="text-align:justify">
   <span style="float:right;margin:5px 0px 10px 30px;width:210px;text-align:center">
     <img alt="Denis Cohen" src="assets/images/denis-2026.png" style="display:block;width:210px">
-    <span style="display:block;color:gray;text-align:center;font-size:0.65em">Credits: University of Mannheim – Sarah Hähnle</span>
+    <span style="display:block;color:gray;text-align:center;font-size:0.5em">Credits: University of Mannheim – Sarah Hähnle</span>
   </span>
   I am a Senior Research Fellow in the <a href="https://www.mzes.uni-mannheim.de/d7/en/dm-unit">Data and Methods Unit</a> at the <a href="https://www.mzes.uni-mannheim.de/d7/en">Mannheim Centre for European Social Research (MZES)</a>, <a href="https://www.uni-mannheim.de/en/">University of Mannheim</a>. I am also the lead organizer of the <a href="https://socialsciencedatalab.mzes.uni-mannheim.de/page/events/">MZES Social Science Data Lab</a> as well as co-founder and co-editor of the blog <a href="https://socialsciencedatalab.mzes.uni-mannheim.de/">Methods Bites</a>, where I regularly contribute <a href="https://www.mzes.uni-mannheim.de/socialsciencedatalab/author/denis-cohen/">tutorials</a> on research methods and social data science. From October 2024 to February 2025, I served as Interim Professor at the <a href="https://www.uni-muenster.de/IfPol/en/personen/bischof.html">Chair of Comparative Politics</a> at the University of Münster.
   <br /><br />
