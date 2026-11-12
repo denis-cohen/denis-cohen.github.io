@@ -7,6 +7,10 @@ title: Research
 
 ##### Peer-Reviewed Journal Articles
 
+###### 2026
+
+* From the center to the fringes: motivational drivers of mainstream-to-challenger defection and their socio-structural foundations (with [Werner Krause](https://krausewe.github.io/) and [Anna E. Aigner](https://www.uni-mannheim.de/gess/programs/cdss/our-students/2025/anna-aigner/)). *Electoral Studies*. [[article]](https://www.sciencedirect.com/science/article/pii/S0261379426001216) [[replication materials]](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/L9BWAT) 
+
 ###### 2025
 
 * Regional Labor Markets, Residential Mobility, and Anti-Immigration Sentiment (with [Sergi Pardos-Prado](https://www.sergipardos.com/)). *British Journal of Political Science*.  [[article]](https://www.cambridge.org/core/journals/british-journal-of-political-science/article/regional-labor-markets-residential-mobility-and-antiimmigration-sentiment/D1EB2AC6A4E0236204A844426666135B) [[replication materials]](https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/VMFSOZ)
@@ -61,9 +65,9 @@ Dissatisfaction and Strategic Incentives Matter for Far-Right Voting. *Political
 
 #### Working Papers and Ongoing Work
 
+* Who wins when the center right refuses the far right? Quasi-experimental evidence from a coalition negotiation rupture (with [Werner Krause](https://krausewe.github.io/), [Rebeca González Antuña](https://sites.google.com/view/rebecagantuna-com/home), and [Stuart J. Turnbull-Dugarte](https://www.turnbulldugarte.com/))
 * Party strategies and vote switching in multi-party systems
-* From the center to the fringes: motivational drivers of mainstream-to-challenger defection and their socio-structural foundations (with Werner Krause and Anna E. Aigner)
-* Fight, flight, adaptation, demise? How residents react to shifts in local political opinion (with Daniel Auer and Sandra Morgenstern)
+* Fight, flight, adaptation, demise? How residents react to shifts in local political opinion (with [Sandra Morgenstern](https://www.sandramorgenstern.com/) and [Daniel Auer](https://daniel-auer.com/))
 * Triangular visualizations: Making sense of statistical significance in multi-group comparisons
 * Bounded Responsiveness: Housing Markets and the Subnational Diversification of Policy Supply (with [Tim Allinger](https://tim-allinger.github.io/) and [Andreas Küpfer](https://andreaskuepfer.github.io/))
 * How Perception of Support Drives Vote Switching to Challenger Parties (with [Daniel Bischof](https://danbischof.com/))
