@@ -10,5 +10,5 @@ Mannheimer Zentrum für Europäische Sozialforschung (MZES)  <br />
 
 #### Office
 A5, 6 (Section A) <br />
-Room A218 <br />
+Room A241 <br />
 68159 Mannheim
