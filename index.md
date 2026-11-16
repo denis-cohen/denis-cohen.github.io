@@ -3,7 +3,7 @@ layout: home
 ---
 
 <p style="text-align:justify">
-  <span style="float:right;margin:5px 0px 10px 30px;width:210px;text-align:center">
+  <span style="float:right;margin:5px 0px 10px 10px;width:200px;text-align:center">
     <img alt="Denis Cohen" src="assets/images/denis-2026.png" style="display:block;width:210px">
     <span style="display:block;color:gray;text-align:center;font-size:0.5em">Credits: University of Mannheim – Sarah Hähnle</span>
   </span>
